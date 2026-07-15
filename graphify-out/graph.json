@@ -6335,6 +6335,62 @@
       "_origin": "ast"
     },
     {
+      "id": "prasanth_todo",
+      "label": "PRASANTH_TODO.md",
+      "file_type": "document",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
+      "label": "PRASANTH_TODO — manual testing & config (2026-07-15)",
+      "file_type": "document",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "prasanth_todo_0_one_time_config_blockers_for_3",
+      "label": "0. One-time config (blockers for §3)",
+      "file_type": "document",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L6",
+      "_origin": "ast"
+    },
+    {
+      "id": "prasanth_todo_1_headroom_a_b_2_days_keep_or_drop_decision",
+      "label": "1. Headroom A/B (~2 days → keep-or-drop decision)",
+      "file_type": "document",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "prasanth_todo_2_toolkit_physical_world_acceptance",
+      "label": "2. Toolkit — physical-world acceptance",
+      "file_type": "document",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "prasanth_todo_3_desktop_cowork_mcp_after_0",
+      "label": "3. Desktop / cowork MCP (after §0)",
+      "file_type": "document",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L46",
+      "_origin": "ast"
+    },
+    {
+      "id": "prasanth_todo_when_done",
+      "label": "When done",
+      "file_type": "document",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L61",
+      "_origin": "ast"
+    },
+    {
       "id": "docs_analysis",
       "label": "ANALYSIS.md",
       "file_type": "document",
@@ -19757,6 +19813,60 @@
       "confidence": "EXTRACTED",
       "source_file": "DOMAIN.md",
       "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "prasanth_todo",
+      "target": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
+      "target": "prasanth_todo_0_one_time_config_blockers_for_3",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
+      "target": "prasanth_todo_1_headroom_a_b_2_days_keep_or_drop_decision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
+      "target": "prasanth_todo_2_toolkit_physical_world_acceptance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
+      "target": "prasanth_todo_3_desktop_cowork_mcp_after_0",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
+      "target": "prasanth_todo_when_done",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "PRASANTH_TODO.md",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
