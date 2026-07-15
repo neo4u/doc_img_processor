@@ -1,0 +1,12 @@
+load("@rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "imagecontext",
+    srcs = [
+        "domain.go",
+        "infra_xdraw.go",
+    ],
+    importpath = "pdftoolkit/imagecontext",
+    visibility = ["//visibility:public"],
+    deps = ["//go/sharedkernel"],
+)

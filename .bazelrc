@@ -1,0 +1,7 @@
+common --enable_bzlmod
+build --incompatible_strict_action_env
+build --incompatible_disallow_empty_glob
+build --enable_platform_specific_config
+build:release --compilation_mode=opt
+test --test_output=errors
+build --disk_cache=~/.cache/bazel-doc-image-processor

@@ -1,0 +1,22 @@
+load("@crate_index//:defs.bzl", "all_crate_deps")
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_library")
+
+rust_library(
+    name = "pdftoolkit",
+    srcs = glob(
+        ["src/**/*.rs"],
+        exclude = ["src/bin/**"],
+    ),
+    crate_name = "pdftoolkit",
+    edition = "2021",
+    visibility = ["//visibility:public"],
+    deps = all_crate_deps(normal = True),
+)
+
+rust_binary(
+    name = "pdftoolkit_bin",
+    srcs = ["src/bin/pdftoolkit.rs"],
+    edition = "2021",
+    visibility = ["//visibility:public"],
+    deps = [":pdftoolkit"] + all_crate_deps(normal = True),
+)

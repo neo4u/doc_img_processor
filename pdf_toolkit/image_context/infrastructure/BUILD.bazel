@@ -1,0 +1,18 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "infrastructure",
+    srcs = [
+        "__init__.py",
+        "pillow_codec.py",
+        "ssim_meter.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//pdf_toolkit/image_context",
+        "//pdf_toolkit/pdf_context",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//numpy",
+        "@pypi//pillow",
+    ],
+)

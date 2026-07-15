@@ -1,0 +1,22 @@
+# GENERATED FILE - DO NOT EDIT!
+#
+# To update this file, run:
+#   bazel run //:gazelle_python_manifest.update
+
+---
+manifest:
+  modules_mapping:
+    PIL: pillow
+    fitz: pymupdf
+    lxml: lxml
+    numpy: numpy
+    packaging: packaging
+    pikepdf: pikepdf
+    pymupdf: pymupdf
+    pypdfium2: pypdfium2
+    pypdfium2_cfg: pypdfium2
+    pypdfium2_cli: pypdfium2
+    pypdfium2_raw: pypdfium2
+  pip_repository:
+    name: pypi
+integrity: d4bcbb175121da3b90e58fc889f348ad65087f30f4672bce9cbfd87d7ad690b3

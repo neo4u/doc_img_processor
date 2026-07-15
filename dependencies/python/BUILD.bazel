@@ -1,0 +1,5 @@
+exports_files([
+    "requirements.in",
+    "requirements-linux-x86_64.txt",
+    "requirements-darwin-aarch64.txt",
+])

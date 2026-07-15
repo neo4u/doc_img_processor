@@ -1,0 +1,18 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "agpl",
+    srcs = [
+        "__init__.py",
+        "native_compressor.py",
+        "pymupdf_codec.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//pdf_toolkit/image_context",
+        "//pdf_toolkit/image_context/infrastructure",
+        "//pdf_toolkit/pdf_context",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//pymupdf",
+    ],
+)

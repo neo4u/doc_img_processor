@@ -1,0 +1,5 @@
+pikepdf>=9.3.0       # MPL-2.0 — primary PDF surgery engine
+Pillow>=11.0.0       # HPND — image codec
+numpy>=2.0.0         # BSD — SSIM meter
+pypdfium2>=4.30.0    # BSD/Apache — zero-AGPL PDF renderer
+PyMuPDF>=1.25.0      # AGPL — optional inspector; confined to pymupdf_codec.py

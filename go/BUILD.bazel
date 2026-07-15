@@ -1,0 +1,5 @@
+# Package marker for the Go module root. `//go:go.mod` (referenced by the
+# go_deps module extension in MODULE.bazel) requires go/ to be a Bazel package,
+# and that reference is resolved before Gazelle runs — so this file must exist.
+# Gazelle generates the go_library/go_binary/go_test targets in the subpackages
+# (go/cli, go/pdfcontext, …); go/ itself holds no Go sources.

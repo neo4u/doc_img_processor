@@ -1,0 +1,68 @@
+load("@gazelle//:def.bzl", "gazelle", "gazelle_binary")
+load("@pypi//:requirements.bzl", "all_whl_requirements")
+load("@rules_python_gazelle_plugin//manifest:defs.bzl", "gazelle_python_manifest")
+load("@rules_python_gazelle_plugin//modules_mapping:def.bzl", "modules_mapping")
+
+# The module structure is conventional enough to need no Gazelle directives:
+#   • Python package lives at the repo root  → repo root is the import root,
+#     so `pdf_toolkit.<...>` resolves with no `python_root` directive.
+#   • Native rules_python rules              → no `map_kind` directives.
+#   • AGPL adapters live in their own package (pdf_context/infrastructure/agpl)
+#                                            → isolated without a generation-mode directive.
+#   • Go import prefix is read from go/go.mod → no `prefix` directive.
+#   • Third-party imports resolve via the checked-in gazelle_python.yaml manifest
+#     (fitz→pymupdf, PIL→pillow, …)          → no `resolve` directives.
+
+gazelle_binary(
+    name = "gazelle_binary",
+    languages = [
+        "@rules_python_gazelle_plugin//python",
+        "@gazelle//language/go",
+    ],
+)
+
+gazelle(
+    name = "gazelle",
+    gazelle = ":gazelle_binary",
+)
+
+# Maps top-level import names → pip distributions (fitz→pymupdf, PIL→pillow, …)
+# so Gazelle resolves third-party deps with no `# gazelle:resolve` directives.
+modules_mapping(
+    name = "modules_map",
+    wheels = all_whl_requirements,
+)
+
+gazelle_python_manifest(
+    name = "gazelle_python_manifest",
+    modules_mapping = ":modules_map",
+    pip_repository_name = "pypi",
+    requirements = "//dependencies/python:requirements-linux-x86_64.txt",
+)
+
+# ── Shared artifacts ──────────────────────────────────────────────────────────
+filegroup(
+    name = "domain_doc",
+    srcs = ["DOMAIN.md"],
+    visibility = ["//visibility:public"],
+)
+
+# ── Top-level CLI aliases ─────────────────────────────────────────────────────
+# (Target names below match what Gazelle generates; verified by `bazel query`.)
+alias(
+    name = "py_cli",
+    actual = "//pdf_toolkit/cli:main",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "go_cli",
+    actual = "//go/cli:cli",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "rust_cli",
+    actual = "//rust:pdftoolkit_bin",
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,14 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "pdf_context",
+    srcs = [
+        "__init__.py",
+        "application.py",
+        "domain.py",
+        "ports.py",
+        "services.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = ["//pdf_toolkit/shared_kernel"],
+)

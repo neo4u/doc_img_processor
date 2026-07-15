@@ -1,0 +1,15 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "image_context",
+    srcs = [
+        "__init__.py",
+        "application.py",
+        "ports.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//pdf_toolkit/pdf_context",
+        "//pdf_toolkit/shared_kernel",
+    ],
+)

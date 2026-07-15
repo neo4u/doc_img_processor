@@ -1,0 +1,22 @@
+load("@rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "pdfcontext",
+    srcs = [
+        "domain.go",
+        "infra_ghostscript.go",
+        "infra_pdfcpu.go",
+        "ports.go",
+        "services.go",
+    ],
+    importpath = "pdftoolkit/pdfcontext",
+    visibility = ["//visibility:public"],
+    deps = ["//go/sharedkernel"],
+)
+
+go_test(
+    name = "pdfcontext_test",
+    srcs = ["services_test.go"],
+    embed = [":pdfcontext"],
+    deps = ["//go/sharedkernel"],
+)

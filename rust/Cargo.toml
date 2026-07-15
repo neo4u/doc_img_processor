@@ -1,0 +1,22 @@
+[package]
+name = "pdftoolkit"
+version = "0.1.0"
+edition = "2021"
+description = "Polyglot PDF & Image toolkit — Rust mirror of the shared ubiquitous language (see ../DOMAIN.md)"
+
+# Planned adapters (mirror the Python pikepdf composite). Kept out for now so
+# `cargo build` is dependency-free and fast; added when the native engine lands:
+#   lopdf              — parse/rewrite PDF object model (MIT)
+#   image + fast_image_resize — decode / Lanczos resize
+#   mozjpeg            — optimal JPEG encode
+#   dssim              — perceptual metric (QualityMeter)
+# Rust has the strongest native image-codec ecosystem of the three languages.
+[dependencies]
+
+[lib]
+name = "pdftoolkit"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pdftoolkit"
+path = "src/bin/pdftoolkit.rs"
