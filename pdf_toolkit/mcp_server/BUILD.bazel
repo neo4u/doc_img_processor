@@ -1,0 +1,36 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+
+py_library(
+    name = "mcp_server",
+    srcs = [
+        "__init__.py",
+        "server.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//pdf_toolkit/image_context",
+        "//pdf_toolkit/image_context/infrastructure",
+        "//pdf_toolkit/pdf_context",
+        "//pdf_toolkit/pdf_context/infrastructure",
+        "//pdf_toolkit/photo_context",
+        "//pdf_toolkit/photo_context/infrastructure",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//mcp",
+    ],
+)
+
+py_binary(
+    name = "server",
+    srcs = ["server.py"],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pdf_toolkit/image_context",
+        "//pdf_toolkit/image_context/infrastructure",
+        "//pdf_toolkit/pdf_context",
+        "//pdf_toolkit/pdf_context/infrastructure",
+        "//pdf_toolkit/photo_context",
+        "//pdf_toolkit/photo_context/infrastructure",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//mcp",
+    ],
+)

@@ -1,7 +1,32 @@
-load("@rules_python//python:defs.bzl", "py_library")
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
 
 py_library(
     name = "pdf_toolkit",
     srcs = ["__init__.py"],
     visibility = ["//:__subpackages__"],
+)
+
+py_test(
+    name = "contracts_test",
+    srcs = ["contracts_test.py"],
+    deps = [
+        ":conftest",
+        "//pdf_toolkit/api",
+        "//pdf_toolkit/mcp_server",
+        "@pypi//pytest",
+    ],
+)
+
+py_library(
+    name = "conftest",
+    testonly = True,
+    srcs = ["conftest.py"],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//pdf_toolkit/api",
+        "@pypi//fastapi",
+        "@pypi//numpy",
+        "@pypi//pillow",
+        "@pypi//pytest",
+    ],
 )

@@ -14,7 +14,8 @@ byte budget with the maximum perceptual quality that clears a quality floor.
 | Context | Responsibility | Package (Py) | Module (Rust) | Package (Go) |
 |---|---|---|---|---|
 | **pdf** | Splitting, PDF-level compression, page/image census | `pdf_context` | `pdf_context` | `pdfcontext` |
-| **image** | Standalone image compression, format conversion, quality metrics | `image_context` | `image_context` | `imagecontext` |
+| **image** | Standalone image compression (incl. lossless), format conversion, quality metrics | `image_context` | `image_context` | `imagecontext` |
+| **photo** | Passport-style photo production (compliance presets), print-sheet composition | `photo_context` | `photo_context` | `photocontext` |
 | **nl** *(later)* | Natural-language → Command (tool schemas), agent loop | `nl_context` | `nl_context` | `nlcontext` |
 
 Each context has the same 4 layers: `domain/` → `application/` (use cases) →
@@ -24,13 +25,17 @@ Each context has the same 4 layers: `domain/` → `application/` (use cases) →
 
 ## Shared Kernel (`shared_kernel`)
 
-Value objects used by both contexts. Immutable; validated on construction.
+Value objects used by all contexts. Immutable; validated on construction.
+**Moved here 2026-07-15 (W2):** `ImageKind`, `ResampleFilter`, `CompressionTarget`,
+`TargetSizeSearch` (one home for the quality search), `LosslessOutcome`, and constants
+(`WHITE`, `GUIDE_COLOR`, `PDF_POINTS_PER_INCH`, `DEFAULT_TARGET_KB`) — ends the
+image↔pdf bidirectional coupling flagged in docs/REVIEW.md.
 
 | Type | Fields | Invariant / Behavior |
 |---|---|---|
-| `MediaFile` | `path`, `size_bytes`, `content_hash` | Identity = content hash. `size_kb`, `exists`. |
+| `MediaFile` | `path`, `size_bytes` | Value object keyed by path. `size_kb`, `exists`. |
 | `ByteBudget` | `target_bytes`, `tolerance` (e.g. `-0%,+5%`) | `ceiling()`, `contains(n)`, `overshoot(n)`. |
-| `QualityFloor` | `metric` (SSIM\|DSSIM\|Butteraugli), `threshold` | `accepts(score) -> bool`. A **domain invariant** — an adapter may not return a result below it. |
+| `QualityFloor` | `metric` (SSIM\|DSSIM\|Butteraugli\|**SSIMULACRA2** planned W6), `threshold` | `accepts(score) -> bool`. A **domain invariant** — an adapter may not return a result below it. ⚠ 2026-07-15: SSIM 0.90 shown decorative (docs/RESEARCH.md §3); target = SSIMULACRA2 ≥ 70/80. Enforcement point lands in W5 (docs/PLAN.md). |
 | `PerceptualScore` | `metric`, `value` | Comparable within a metric. |
 | `EffectiveDpi` | `pixels`, `rendered_inches` | Computed from page **geometry (CTM)**, *never* image metadata. `value = pixels / rendered_inches`. |
 
@@ -41,9 +46,8 @@ Value objects used by both contexts. Immutable; validated on construction.
 ### Domain
 | Type | Kind | Notes |
 |---|---|---|
-| `PdfDocument` | Aggregate root | Identity = content hash. Has pages, each with `EmbeddedImage`s. |
-| `PageRange` | Value object | 1-indexed, inclusive; rejects empty/inverted. |
-| `SplitSpec` | Value object | `name` + `PageRange`. |
+| `PdfDocument` | Aggregate root *(planned)* | Not yet in code; census operates on `MediaFile`. |
+| `PageRange` / `SplitSpec` | *(deleted 2026-07-15, W2 — YAGNI)* | Restore from git when `SplitPdf` is actually built. |
 | `EmbeddedImage` | Entity | `xref`, `width`, `height`, `ImageKind`, `Codec`, `EffectiveDpi`, `rendered_area`. |
 | `ImageKind` | Enum | `Bitonal` \| `Grayscale` \| `Color` — drives resample + re-encode strategy. |
 | `Codec` | Enum | `Jpeg`(DCTDecode) \| `CcittG4`(CCITTFaxDecode) \| `Flate` \| `Png` \| `Jbig2` \| `Raw`. |
@@ -53,17 +57,18 @@ Value objects used by both contexts. Immutable; validated on construction.
 | `CompressionResult` | Value object | output `MediaFile`, `before/after_bytes`, `dpi_used`, `quality_used`, `PerceptualScore`, `engine`, `elapsed_ms`. |
 | `DocumentCensus` | Value object | image inventory, non-image bytes, per-image `EffectiveDpi` (output of inspect). |
 
-### Domain events
-`CompressionAttempted` · `BudgetMissed` · `QualityFloorViolated` — drive
-retry/escalation (native pipeline → Ghostscript fallback).
+### Domain events *(deleted 2026-07-15, W2)*
+Escalation is recorded in `CompressionResult.escalated`; typed events return
+when the retry loop (algorithm step 6) is implemented — see docs/PLAN.md W5.
 
 ### Ports (interfaces / traits)
 | Port | Method(s) |
 |---|---|
-| `Splitter` | `split(doc, [SplitSpec], out_dir) -> [MediaFile]` |
-| `PdfInspector` | `inspect(doc) -> DocumentCensus` |
-| `PdfCodec` | `extract_images(doc)` · `replace_image(doc, xref, bytes, codec)` · `structural_optimize(doc) -> MediaFile` |
-| `Compressor` | `compress(doc, CompressionTarget) -> CompressionResult` |
+| `PdfInspector` | `inspect(doc) -> DocumentCensus` — adapters: `PikepdfInspector` (license-clean, served) · `PyMuPdfInspector` (AGPL, CLI-only) |
+| `Compressor` | `compress(doc, CompressionTarget, out) -> CompressionResult` |
+| `PdfMerger` | `merge([MediaFile], out) -> (MediaFile, pages)` |
+| `StructuralOptimizer` | `optimize(doc, out, strip_metadata) -> LosslessOutcome` |
+| *(`Splitter`/`PdfCodec` deleted 2026-07-15, W2 — unused; git remembers)* | |
 
 ### Domain services (pure orchestration, no library imports)
 - **`TargetSizeSearch`** — binary search over encoder quality (§ quality search),
@@ -93,7 +98,44 @@ retry/escalation (native pipeline → Ghostscript fallback).
 | `QualityMeter` | `score(original, candidate) -> PerceptualScore` |
 
 ### Application use cases
-`CompressImageToTarget` · `ConvertImage` · `Batch`
+`CompressImageToTarget` · `ConvertImage` · `Batch` · `CompressImageLossless`
+
+### Lossless (added 2026-07-14)
+| Type | Notes |
+|---|---|
+| `LosslessOptimizer` (port) | `optimize(bytes, fmt) -> bytes` — **pixels must be bit-exact**. JPEG = entropy-coding-only (mozjpeg); PNG = recompress. |
+| `LosslessOutcome` | output `MediaFile`, `before/after_bytes`, `changed`. Hard rule #1 applies. |
+
+---
+
+## `photo` Context
+
+Passport-style photo production + print-sheet composition. See `docs/LLD.md` §2–4
+for full signatures. Compliance specs are **data presets**, never code branches.
+
+### Domain
+| Type | Notes |
+|---|---|
+| `PhotoSpec` | Value object preset: exact `width_px×height_px`, `dpi`, `background`, optional `max_bytes` (portal ceiling), human `notes`. Presets: `us_passport`, `india_passport`, `india_oci` (≤ 200 KB). |
+| `SheetSpec` | Print sheet: `width_in×height_in` @ `dpi` (300). `4x6` → 1200×1800 px. |
+| `SheetLayout` | Computed tiling: `cols×rows`, cell px, offsets. 2×2″ on 4×6″ → 6-up. |
+
+### Domain services
+- **`SheetLayoutService`** — pure tiling math; leftover space becomes uniform gutters (cut lanes).
+
+### Ports
+| Port | Method(s) |
+|---|---|
+| `PhotoRenderer` | `load` (HEIC/JPG/PNG, EXIF-transposed) · `crop_to_aspect` · `resize` · `flatten` · `encode_jpeg(quality, dpi)` · `compose(sheet)` |
+| `FaceLocator` | `anchor(w, h) -> (fx, fy)` crop center. v1: `CenterFaceLocator` (0.5, 0.45); CV adapter later. |
+
+### Application use cases
+`CreatePassportPhoto` (byte ceiling via the shared quality binary search) · `ComposePrintSheet`
+
+### Photo hard rules
+1. Byte-ceiling enforcement reuses the § quality search — one algorithm home.
+2. Never silently upscale: flag `upscaled=True` + warning when source < spec pixels.
+3. Output DPI metadata always embedded (print sizing depends on it).
 
 ---
 
@@ -135,6 +177,10 @@ return best
 4. **Quality floor is a domain invariant** — an adapter may not return a result below it.
 5. **Every adapter behind a port**; AGPL deps (PyMuPDF, MuPDF, Ghostscript) isolated to
    their adapter module so they're swappable if the code is ever distributed.
+6. **Type discipline (Python reference):** value objects & results = `@dataclass(frozen=True)`;
+   use cases = `@dataclass`; ports = `ABC` when adapters subclass deliberately,
+   `typing.Protocol` when satisfaction should be structural (no inward import).
+   Go mirrors ports as interfaces, Rust as traits — same names, same methods.
 
 ---
 

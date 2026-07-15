@@ -8,8 +8,10 @@ Surgically rewrites each image XObject in place — never re-distills the whole 
 so fonts/annotations/vector content are untouched (unlike Ghostscript). This is the
 license-clean primary path for the future hosted UI (no AGPL §13 network copyleft).
 """
+
 from __future__ import annotations
 
+import contextlib
 import time
 from pathlib import Path
 
@@ -20,20 +22,19 @@ from pdf_toolkit.image_context.application import recompress_to_slice
 from pdf_toolkit.image_context.infrastructure.pillow_codec import PillowImageCodec
 from pdf_toolkit.image_context.infrastructure.ssim_meter import NumpySsimMeter
 from pdf_toolkit.image_context.ports import ImageCodec, QualityMeter
-from pdf_toolkit.pdf_context.domain import (
-    Codec,
-    CompressionResult,
-    CompressionTarget,
-    EmbeddedImage,
-    ImageKind,
-)
+from pdf_toolkit.pdf_context.domain import Codec, CompressionResult, DocumentCensus, EmbeddedImage
 from pdf_toolkit.pdf_context.ports import Compressor
 from pdf_toolkit.pdf_context.services import BudgetDecomposition
-from pdf_toolkit.pdf_context.domain import DocumentCensus
-from pdf_toolkit.shared_kernel import EffectiveDpi, Metric, MediaFile, PerceptualScore
+from pdf_toolkit.shared_kernel import (
+    CompressionTarget,
+    EffectiveDpi,
+    ImageKind,
+    MediaFile,
+    Metric,
+    PerceptualScore,
+)
 
-_CS_KIND = {"/DeviceGray": ImageKind.GRAYSCALE, "/DeviceRGB": ImageKind.COLOR,
-            "/DeviceCMYK": ImageKind.COLOR}
+_CS_KIND = {"/DeviceGray": ImageKind.GRAYSCALE, "/DeviceRGB": ImageKind.COLOR, "/DeviceCMYK": ImageKind.COLOR}
 
 
 def _image_kind(obj) -> ImageKind:
@@ -66,7 +67,7 @@ class PikepdfCompressor(Compressor):
         pdf = pikepdf.open(source.path)
         try:
             # Pass 1: census — collect (object, EmbeddedImage) with geometry DPI.
-            entries: list[tuple[object, EmbeddedImage]] = []
+            entries: list[tuple[pikepdf.Object, EmbeddedImage]] = []
             image_bytes = 0
             for pno, page in enumerate(pdf.pages):
                 box = page.mediabox
@@ -75,20 +76,28 @@ class PikepdfCompressor(Compressor):
                 for _, obj in page.get_images().items():
                     w, h = int(obj.Width), int(obj.Height)
                     kind = _image_kind(obj)
-                    try:
+                    with contextlib.suppress(Exception):
                         image_bytes += len(obj.read_raw_bytes())
-                    except Exception:
-                        pass
                     eff = EffectiveDpi(pixels=w, rendered_inches=page_w_in or 1.0)
-                    entries.append((obj, EmbeddedImage(
-                        xref=obj.objgen[0], page_index=pno, width=w, height=h,
-                        kind=kind, codec=Codec.JPEG,
-                        effective_dpi=eff,
-                        rendered_area_sqin=(page_w_in * page_h_in) or 1.0,
-                    )))
+                    entries.append(
+                        (
+                            obj,
+                            EmbeddedImage(
+                                xref=obj.objgen[0],
+                                page_index=pno,
+                                width=w,
+                                height=h,
+                                kind=kind,
+                                codec=Codec.JPEG,
+                                effective_dpi=eff,
+                                rendered_area_sqin=(page_w_in * page_h_in) or 1.0,
+                            ),
+                        )
+                    )
 
             census = DocumentCensus(
-                file=source, page_count=len(pdf.pages),
+                file=source,
+                page_count=len(pdf.pages),
                 images=[e for _, e in entries],
                 non_image_bytes=max(0, source.size_bytes - image_bytes),
             )
@@ -102,11 +111,15 @@ class PikepdfCompressor(Compressor):
                     continue  # CCITT G4 surgery: see DOMAIN.md; corpus has none
                 original = obj.read_raw_bytes()
                 outcome = recompress_to_slice(
-                    original=original, kind=img.kind,
-                    width=img.width, height=img.height,
-                    effective_dpi=img.effective_dpi, target=target,
+                    original=original,
+                    kind=img.kind,
+                    width=img.width,
+                    height=img.height,
+                    effective_dpi=img.effective_dpi,
+                    target=target,
                     slice_bytes=slices.get(img.xref, image_budget),
-                    codec=self._codec, meter=self._meter,
+                    codec=self._codec,
+                    meter=self._meter,
                 )
                 obj.write(outcome.data, filter=Name.DCTDecode)
                 obj.Width, obj.Height = outcome.new_width, outcome.new_height
@@ -120,23 +133,33 @@ class PikepdfCompressor(Compressor):
             pdf.close()
 
         after = out.stat().st_size
-        if after >= source.size_bytes:                     # hard rule #1
+        if after >= source.size_bytes:  # hard rule #1
             out.write_bytes(source.path.read_bytes())
             return self._result(source, out, 0, 0, None, start)
         if after > ceiling and self._escalation is not None:  # BudgetMissed -> GS
             res = self._escalation.compress(source, target, out)
             return CompressionResult(
-                output=res.output, engine=f"{self.name}->{res.engine}",
-                before_bytes=res.before_bytes, after_bytes=res.after_bytes,
-                dpi_used=res.dpi_used, quality_used=res.quality_used, score=res.score,
-                elapsed_ms=int((time.monotonic() - start) * 1000), escalated=True,
+                output=res.output,
+                engine=f"{self.name}->{res.engine}",
+                before_bytes=res.before_bytes,
+                after_bytes=res.after_bytes,
+                dpi_used=res.dpi_used,
+                quality_used=res.quality_used,
+                score=res.score,
+                elapsed_ms=int((time.monotonic() - start) * 1000),
+                escalated=True,
             )
         return self._result(source, out, dpi_used, q_used, worst, start)
 
     def _result(self, source, out, dpi, q, score, start) -> CompressionResult:
         return CompressionResult(
-            output=MediaFile.of(out), engine=self.name,
-            before_bytes=source.size_bytes, after_bytes=Path(out).stat().st_size,
-            dpi_used=dpi, quality_used=q, score=score,
-            elapsed_ms=int((time.monotonic() - start) * 1000), escalated=False,
+            output=MediaFile.of(out),
+            engine=self.name,
+            before_bytes=source.size_bytes,
+            after_bytes=Path(out).stat().st_size,
+            dpi_used=dpi,
+            quality_used=q,
+            score=score,
+            elapsed_ms=int((time.monotonic() - start) * 1000),
+            escalated=False,
         )

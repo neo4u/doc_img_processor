@@ -4,6 +4,7 @@ Binary-searches -dColorImageResolution to sit just under the byte budget. Confin
 here so the external `gs` dependency is swappable. Fires as an escalation when the
 native pipeline reports BudgetMissed.
 """
+
 from __future__ import annotations
 
 import subprocess
@@ -11,9 +12,9 @@ import tempfile
 import time
 from pathlib import Path
 
-from pdf_toolkit.pdf_context.domain import CompressionResult, CompressionTarget
+from pdf_toolkit.pdf_context.domain import CompressionResult
 from pdf_toolkit.pdf_context.ports import Compressor
-from pdf_toolkit.shared_kernel import MediaFile
+from pdf_toolkit.shared_kernel import CompressionTarget, MediaFile
 
 
 class GhostscriptCompressor(Compressor):
@@ -26,16 +27,22 @@ class GhostscriptCompressor(Compressor):
     def _run(self, src: Path, dst: Path, dpi: int) -> int:
         subprocess.run(
             [
-                self._gs, "-sDEVICE=pdfwrite", "-dNOPAUSE", "-dQUIET", "-dBATCH",
+                self._gs,
+                "-sDEVICE=pdfwrite",
+                "-dNOPAUSE",
+                "-dQUIET",
+                "-dBATCH",
                 "-dPDFSETTINGS=/default",
                 f"-dColorImageResolution={dpi}",
                 f"-dGrayImageResolution={dpi}",
                 f"-dMonoImageResolution={dpi}",
                 "-dDownsampleColorImages=true",
                 "-dDownsampleGrayImages=true",
-                f"-sOutputFile={dst}", str(src),
+                f"-sOutputFile={dst}",
+                str(src),
             ],
-            check=True, capture_output=True,
+            check=True,
+            capture_output=True,
         )
         return dst.stat().st_size
 
@@ -68,8 +75,13 @@ class GhostscriptCompressor(Compressor):
 
     def _result(self, source: MediaFile, out: Path, dpi: int, start: float) -> CompressionResult:
         return CompressionResult(
-            output=MediaFile.of(out), engine=self.name,
-            before_bytes=source.size_bytes, after_bytes=out.stat().st_size,
-            dpi_used=dpi, quality_used=0, score=None,
-            elapsed_ms=int((time.monotonic() - start) * 1000), escalated=False,
+            output=MediaFile.of(out),
+            engine=self.name,
+            before_bytes=source.size_bytes,
+            after_bytes=out.stat().st_size,
+            dpi_used=dpi,
+            quality_used=0,
+            score=None,
+            elapsed_ms=int((time.monotonic() - start) * 1000),
+            escalated=False,
         )

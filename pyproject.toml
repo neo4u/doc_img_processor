@@ -1,0 +1,37 @@
+# Tooling config only — packaging/build stays with Bazel (docs/BAZEL_MIGRATION.md).
+
+[tool.ruff]
+line-length = 110
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = [
+    "E741",   # ambiguous single-letter names — used deliberately in math code
+    "SIM108", # ternary rewrites — prefer explicit branches in domain code
+    "UP042",  # keep `str, Enum`: values mirror Go/Rust string enums (DOMAIN.md)
+    "UP046",  # keep explicit TypeVar: ImageT is exported/shared across modules
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]   # __init__ files are deliberate re-export surfaces
+
+[tool.ruff.lint.isort]
+known-first-party = ["pdf_toolkit"]
+
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true      # fitz, pillow_heif, mozjpeg wheels ship no stubs
+check_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+no_implicit_optional = true
+
+[tool.pytest.ini_options]
+testpaths = ["pdf_toolkit"]
+addopts = "-q -m 'not slow and not perf and not manual'"
+markers = [
+    "slow: expensive but functional — excluded from the default run",
+    "perf: performance budget assertions — run with -m perf",
+    "manual: stress/long-running — run explicitly with -m manual",
+]

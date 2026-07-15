@@ -1,0 +1,35 @@
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
+
+py_library(
+    name = "api",
+    srcs = [
+        "__init__.py",
+        "app.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//pdf_toolkit/image_context",
+        "//pdf_toolkit/image_context/infrastructure",
+        "//pdf_toolkit/pdf_context",
+        "//pdf_toolkit/pdf_context/infrastructure",
+        "//pdf_toolkit/photo_context",
+        "//pdf_toolkit/photo_context/infrastructure",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//fastapi",
+        "@pypi//python_multipart",
+    ],
+)
+
+py_test(
+    name = "app_test",
+    srcs = ["app_test.py"],
+    deps = [
+        ":api",
+        "//pdf_toolkit:conftest",
+        "@pypi//fastapi",
+        "@pypi//httpx2",
+        "@pypi//numpy",
+        "@pypi//pillow",
+        "@pypi//pytest",
+    ],
+)

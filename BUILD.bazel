@@ -40,6 +40,24 @@ gazelle_python_manifest(
     requirements = "//dependencies/python:requirements-linux-x86_64.txt",
 )
 
+# ── Dev workflow targets ──────────────────────────────────────────────────────
+# bazel run //:venv        — bootstrap/refresh .venv from requirements(.dev).in
+# bazel run //:pre-commit  — ruff + mypy + pytest + gazelle-diff gate
+sh_binary(
+    name = "venv",
+    srcs = ["tools/venv.sh"],
+    data = [
+        "//dependencies/python:requirements.in",
+        "//dependencies/python:requirements-dev.in",
+    ],
+)
+
+sh_binary(
+    name = "pre-commit",
+    srcs = ["tools/pre-commit.sh"],
+    data = ["pyproject.toml"],
+)
+
 # ── Shared artifacts ──────────────────────────────────────────────────────────
 filegroup(
     name = "domain_doc",

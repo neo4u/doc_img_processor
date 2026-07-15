@@ -1,0 +1,4 @@
+ruff>=0.8.0          # MIT — lint + format
+mypy>=1.13.0         # MIT — type check
+pytest>=8.3.0        # MIT — tests
+httpx2>=0.1.0        # BSD — FastAPI/starlette TestClient transport (httpx successor)

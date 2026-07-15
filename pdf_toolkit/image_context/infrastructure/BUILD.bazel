@@ -4,14 +4,15 @@ py_library(
     name = "infrastructure",
     srcs = [
         "__init__.py",
+        "lossless.py",
         "pillow_codec.py",
         "ssim_meter.py",
     ],
     visibility = ["//:__subpackages__"],
     deps = [
         "//pdf_toolkit/image_context",
-        "//pdf_toolkit/pdf_context",
         "//pdf_toolkit/shared_kernel",
+        "@pypi//mozjpeg_lossless_optimization",
         "@pypi//numpy",
         "@pypi//pillow",
     ],

@@ -4,6 +4,7 @@ Same target-size algorithm as PikepdfCompressor, sharing the per-image decision 
 image_context.recompress_to_slice. Kept as an alternative engine: PyMuPDF is a single
 fast dependency, but AGPL — prefer PikepdfCompressor for anything network-served.
 """
+
 from __future__ import annotations
 
 import time
@@ -15,15 +16,11 @@ from pdf_toolkit.image_context.application import recompress_to_slice
 from pdf_toolkit.image_context.infrastructure.pillow_codec import PillowImageCodec
 from pdf_toolkit.image_context.infrastructure.ssim_meter import NumpySsimMeter
 from pdf_toolkit.image_context.ports import ImageCodec, QualityMeter
-from pdf_toolkit.pdf_context.domain import (
-    CompressionResult,
-    CompressionTarget,
-    ImageKind,
-)
+from pdf_toolkit.pdf_context.domain import CompressionResult
 from pdf_toolkit.pdf_context.infrastructure.agpl.pymupdf_codec import PyMuPdfInspector
 from pdf_toolkit.pdf_context.ports import Compressor, PdfInspector
 from pdf_toolkit.pdf_context.services import BudgetDecomposition
-from pdf_toolkit.shared_kernel import Metric, MediaFile, PerceptualScore
+from pdf_toolkit.shared_kernel import CompressionTarget, ImageKind, MediaFile, Metric, PerceptualScore
 
 
 class NativeImageCompressor(Compressor):
@@ -61,11 +58,15 @@ class NativeImageCompressor(Compressor):
                     continue
                 original = doc.extract_image(img.xref)["image"]
                 outcome = recompress_to_slice(
-                    original=original, kind=img.kind,
-                    width=img.width, height=img.height,
-                    effective_dpi=img.effective_dpi, target=target,
+                    original=original,
+                    kind=img.kind,
+                    width=img.width,
+                    height=img.height,
+                    effective_dpi=img.effective_dpi,
+                    target=target,
                     slice_bytes=slices.get(img.xref, image_budget),
-                    codec=self._codec, meter=self._meter,
+                    codec=self._codec,
+                    meter=self._meter,
                 )
                 for page in doc:
                     if any(i[0] == img.xref for i in page.get_images(full=True)):
@@ -84,17 +85,27 @@ class NativeImageCompressor(Compressor):
         if after > ceiling and self._escalation is not None:
             res = self._escalation.compress(source, target, out)
             return CompressionResult(
-                output=res.output, engine=f"{self.name}->{res.engine}",
-                before_bytes=res.before_bytes, after_bytes=res.after_bytes,
-                dpi_used=res.dpi_used, quality_used=res.quality_used, score=res.score,
-                elapsed_ms=int((time.monotonic() - start) * 1000), escalated=True,
+                output=res.output,
+                engine=f"{self.name}->{res.engine}",
+                before_bytes=res.before_bytes,
+                after_bytes=res.after_bytes,
+                dpi_used=res.dpi_used,
+                quality_used=res.quality_used,
+                score=res.score,
+                elapsed_ms=int((time.monotonic() - start) * 1000),
+                escalated=True,
             )
         return self._result(source, out, dpi_used, q_used, worst, start)
 
     def _result(self, source, out, dpi, q, score, start) -> CompressionResult:
         return CompressionResult(
-            output=MediaFile.of(out), engine=self.name,
-            before_bytes=source.size_bytes, after_bytes=Path(out).stat().st_size,
-            dpi_used=dpi, quality_used=q, score=score,
-            elapsed_ms=int((time.monotonic() - start) * 1000), escalated=False,
+            output=MediaFile.of(out),
+            engine=self.name,
+            before_bytes=source.size_bytes,
+            after_bytes=Path(out).stat().st_size,
+            dpi_used=dpi,
+            quality_used=q,
+            score=score,
+            elapsed_ms=int((time.monotonic() - start) * 1000),
+            escalated=False,
         )

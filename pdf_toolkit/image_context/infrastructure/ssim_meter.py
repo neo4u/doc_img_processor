@@ -4,6 +4,7 @@ Avoids a scipy/scikit-image dependency. Computes mean SSIM over an 8x8 uniform
 window on the luma channel, images aligned to the smaller of the two sizes.
 Good enough to *rank* engines; note it's a box-window (not Gaussian) SSIM.
 """
+
 from __future__ import annotations
 
 import io
@@ -44,7 +45,5 @@ class NumpySsimMeter(QualityMeter):
         myy = _box(y * y, _WIN) - my * my
         mxy = _box(x * y, _WIN) - mx * my
 
-        ssim_map = ((2 * mx * my + _C1) * (2 * mxy + _C2)) / (
-            (mx * mx + my * my + _C1) * (mxx + myy + _C2)
-        )
+        ssim_map = ((2 * mx * my + _C1) * (2 * mxy + _C2)) / ((mx * mx + my * my + _C1) * (mxx + myy + _C2))
         return PerceptualScore(Metric.SSIM, float(np.clip(ssim_map.mean(), 0.0, 1.0)))

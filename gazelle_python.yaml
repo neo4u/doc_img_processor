@@ -6,17 +6,74 @@
 ---
 manifest:
   modules_mapping:
+    08ae81f72d5a2b5fa9e0__mypyc: mypy
     PIL: pillow
+    annotated_doc: annotated_doc
+    annotated_types: annotated_types
+    anyio: anyio
+    ast_serialize: ast_serialize
+    attr: attrs
+    attrs: attrs
+    certifi: certifi
+    cffi: cffi
+    click: click
+    cryptography: cryptography
+    dotenv: python_dotenv
+    fastapi: fastapi
     fitz: pymupdf
+    h11: h11
+    httpcore: httpcore
+    httpcore2: httpcore2
+    httpx: httpx
+    httpx2: httpx2
+    httpx_sse: httpx_sse
+    idna: idna
+    iniconfig: iniconfig
+    jsonschema: jsonschema
+    jsonschema_specifications: jsonschema_specifications
+    jwt: pyjwt
+    librt.base64: librt
+    librt.internal: librt
+    librt.random: librt
+    librt.strings: librt
+    librt.threading: librt
+    librt.time: librt
+    librt.vecs: librt
     lxml: lxml
+    mcp: mcp
+    mozjpeg_lossless_optimization: mozjpeg_lossless_optimization
+    multipart: python_multipart
+    mypy: mypy
+    mypy_extensions: mypy_extensions
+    mypyc: mypy
     numpy: numpy
     packaging: packaging
+    pathspec: pathspec
     pikepdf: pikepdf
+    pillow_heif: pillow_heif
+    pluggy: pluggy
+    py: pytest
+    pycparser: pycparser
+    pydantic: pydantic
+    pydantic_core: pydantic_core
+    pydantic_settings: pydantic_settings
+    pygments: pygments
     pymupdf: pymupdf
     pypdfium2: pypdfium2
     pypdfium2_cfg: pypdfium2
     pypdfium2_cli: pypdfium2
     pypdfium2_raw: pypdfium2
+    pytest: pytest
+    python_multipart: python_multipart
+    referencing: referencing
+    rpds: rpds_py
+    ruff: ruff
+    sse_starlette: sse_starlette
+    starlette: starlette
+    truststore: truststore
+    typing_extensions: typing_extensions
+    typing_inspection: typing_inspection
+    uvicorn: uvicorn
   pip_repository:
     name: pypi
-integrity: d4bcbb175121da3b90e58fc889f348ad65087f30f4672bce9cbfd87d7ad690b3
+integrity: a8719162d8e4b475109439b85cbfee9ef87441ebba98dece39df2d8e78a1800c

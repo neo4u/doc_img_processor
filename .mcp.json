@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "doc-toolkit": {
+      "command": ".venv/bin/python",
+      "args": ["-m", "pdf_toolkit.mcp_server.server"]
+    }
+  }
+}

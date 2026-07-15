@@ -5,12 +5,14 @@ py_binary(
     srcs = ["main.py"],
     visibility = ["//:__subpackages__"],
     deps = [
+        "//pdf_toolkit/image_context",
         "//pdf_toolkit/image_context/infrastructure",
         "//pdf_toolkit/pdf_context",
         "//pdf_toolkit/pdf_context/infrastructure",
         "//pdf_toolkit/pdf_context/infrastructure/agpl",
+        "//pdf_toolkit/photo_context",
+        "//pdf_toolkit/photo_context/infrastructure",
         "//pdf_toolkit/shared_kernel",
-        "@pypi//pikepdf",
         "@pypi//pypdfium2",
     ],
 )
@@ -23,12 +25,14 @@ py_library(
     ],
     visibility = ["//:__subpackages__"],
     deps = [
+        "//pdf_toolkit/image_context",
         "//pdf_toolkit/image_context/infrastructure",
         "//pdf_toolkit/pdf_context",
         "//pdf_toolkit/pdf_context/infrastructure",
         "//pdf_toolkit/pdf_context/infrastructure/agpl",
+        "//pdf_toolkit/photo_context",
+        "//pdf_toolkit/photo_context/infrastructure",
         "//pdf_toolkit/shared_kernel",
-        "@pypi//pikepdf",
         "@pypi//pypdfium2",
     ],
 )

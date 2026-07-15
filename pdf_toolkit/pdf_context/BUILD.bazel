@@ -1,4 +1,4 @@
-load("@rules_python//python:defs.bzl", "py_library")
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
 
 py_library(
     name = "pdf_context",
@@ -11,4 +11,18 @@ py_library(
     ],
     visibility = ["//:__subpackages__"],
     deps = ["//pdf_toolkit/shared_kernel"],
+)
+
+py_test(
+    name = "lossless_test",
+    srcs = ["lossless_test.py"],
+    deps = [
+        ":pdf_context",
+        "//pdf_toolkit:conftest",
+        "//pdf_toolkit/pdf_context/infrastructure",
+        "@pypi//numpy",
+        "@pypi//pillow",
+        "@pypi//pypdfium2",
+        "@pypi//pytest",
+    ],
 )

@@ -6,6 +6,9 @@ py_library(
         "__init__.py",
         "ghostscript_compressor.py",
         "pikepdf_compressor.py",
+        "pikepdf_inspector.py",
+        "pikepdf_lossless.py",
+        "pikepdf_merger.py",
     ],
     visibility = ["//:__subpackages__"],
     deps = [

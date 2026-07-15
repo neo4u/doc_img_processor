@@ -5,14 +5,24 @@
   enforcing the QualityFloor. Both the PyMuPDF and pikepdf PDF compressors call this,
   so the algorithm lives in exactly one place (ubiquitous language: TargetSizeSearch).
 """
+
 from __future__ import annotations
 
+from collections.abc import Callable
 from dataclasses import dataclass
+from pathlib import Path
 
-from pdf_toolkit.image_context.ports import ImageCodec, QualityMeter
-from pdf_toolkit.pdf_context.domain import CompressionTarget, ImageKind, ResampleFilter
-from pdf_toolkit.pdf_context.services import TargetSizeSearch
-from pdf_toolkit.shared_kernel import EffectiveDpi, PerceptualScore
+from pdf_toolkit.image_context.ports import ImageCodec, LosslessOptimizer, QualityMeter
+from pdf_toolkit.shared_kernel import (
+    CompressionTarget,
+    EffectiveDpi,
+    ImageKind,
+    LosslessOutcome,
+    MediaFile,
+    PerceptualScore,
+    ResampleFilter,
+    TargetSizeSearch,
+)
 
 
 @dataclass(frozen=True)
@@ -55,12 +65,58 @@ def recompress_to_slice(
         return len(buf), meter.score(original, buf)
 
     chosen = search.best_quality(slice_bytes, encode)
-    quality = chosen[0] if chosen else target.quality_range[0]
+    if chosen is not None:
+        quality = chosen[0]
+    else:
+        # Nothing fit the slice at an acceptable score. The floor is the domain
+        # invariant (hard rule #4) — never sacrifice it for the budget: pick the
+        # LOWEST quality the floor accepts (smallest acceptable file) and let the
+        # caller's budget check trigger escalation. Never quality_range[0] blindly.
+        quality = _lowest_floor_quality(target, encode)
 
     data = codec.encode(resized, fmt, quality)
     score = meter.score(original, data)
     return RecompressOutcome(
-        data=data, new_width=new_w, new_height=new_h,
-        dpi_used=int(effective_dpi.value * scale), quality_used=quality,
-        score=score, codec_fmt=fmt,
+        data=data,
+        new_width=new_w,
+        new_height=new_h,
+        dpi_used=int(effective_dpi.value * scale),
+        quality_used=quality,
+        score=score,
+        codec_fmt=fmt,
     )
+
+
+def _lowest_floor_quality(
+    target: CompressionTarget,
+    encode: Callable[[int], tuple[int, PerceptualScore]],
+) -> int:
+    """Coarse upward walk: first quality the floor accepts; ceiling of range if none."""
+    lo, hi = target.quality_range
+    for q in range(lo, hi, 10):
+        _, score = encode(q)
+        if target.quality_floor.accepts(score):
+            return q
+    return hi
+
+
+@dataclass
+class CompressImageLossless:
+    """Shrink a JPEG/PNG with bit-exact pixels. Hard rule #1: never emit larger."""
+
+    optimizer: LosslessOptimizer
+
+    def __call__(self, input_path: str | Path, out_path: str | Path) -> LosslessOutcome:
+        source = MediaFile.of(input_path)
+        if not source.exists:
+            raise FileNotFoundError(f"file not found: {source.path}")
+        original = source.path.read_bytes()
+        optimized = self.optimizer.optimize(original, source.path.suffix)
+
+        out = Path(out_path)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        if len(optimized) >= len(original):  # hard rule #1
+            out.write_bytes(original)
+            return LosslessOutcome(MediaFile.of(out), len(original), len(original), changed=False)
+        out.write_bytes(optimized)
+        return LosslessOutcome(MediaFile.of(out), len(original), len(optimized), changed=True)

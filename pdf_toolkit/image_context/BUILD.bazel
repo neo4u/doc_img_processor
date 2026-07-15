@@ -1,4 +1,4 @@
-load("@rules_python//python:defs.bzl", "py_library")
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
 
 py_library(
     name = "image_context",
@@ -8,8 +8,29 @@ py_library(
         "ports.py",
     ],
     visibility = ["//:__subpackages__"],
+    deps = ["//pdf_toolkit/shared_kernel"],
+)
+
+py_test(
+    name = "lossless_test",
+    srcs = ["lossless_test.py"],
     deps = [
-        "//pdf_toolkit/pdf_context",
+        ":image_context",
+        "//pdf_toolkit:conftest",
+        "//pdf_toolkit/image_context/infrastructure",
+        "@pypi//numpy",
+        "@pypi//pillow",
+        "@pypi//pytest",
+    ],
+)
+
+py_test(
+    name = "recompress_test",
+    srcs = ["recompress_test.py"],
+    deps = [
+        ":image_context",
+        "//pdf_toolkit:conftest",
         "//pdf_toolkit/shared_kernel",
+        "@pypi//pytest",
     ],
 )

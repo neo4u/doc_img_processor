@@ -1,0 +1,40 @@
+load("@rules_python//python:defs.bzl", "py_library", "py_test")
+
+py_library(
+    name = "photo_context",
+    srcs = [
+        "__init__.py",
+        "application.py",
+        "domain.py",
+        "ports.py",
+        "services.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//pdf_toolkit/shared_kernel",
+    ],
+)
+
+py_test(
+    name = "services_test",
+    srcs = ["services_test.py"],
+    deps = [
+        ":photo_context",
+        "//pdf_toolkit:conftest",
+        "@pypi//pytest",
+    ],
+)
+
+py_test(
+    name = "application_test",
+    srcs = ["application_test.py"],
+    deps = [
+        ":photo_context",
+        "//pdf_toolkit:conftest",
+        "//pdf_toolkit/photo_context/infrastructure",
+        "@pypi//numpy",
+        "@pypi//pillow",
+        "@pypi//pillow_heif",
+        "@pypi//pytest",
+    ],
+)

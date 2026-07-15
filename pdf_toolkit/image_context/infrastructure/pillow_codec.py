@@ -1,4 +1,5 @@
 """image context — Pillow adapter for ImageCodec."""
+
 from __future__ import annotations
 
 import io
@@ -6,7 +7,7 @@ import io
 from PIL import Image
 
 from pdf_toolkit.image_context.ports import ImageCodec
-from pdf_toolkit.pdf_context.domain import ResampleFilter
+from pdf_toolkit.shared_kernel import ResampleFilter
 
 _PIL_FILTER = {
     ResampleFilter.NEAREST: Image.Resampling.NEAREST,

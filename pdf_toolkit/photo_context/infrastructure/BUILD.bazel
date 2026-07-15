@@ -1,0 +1,16 @@
+load("@rules_python//python:defs.bzl", "py_library")
+
+py_library(
+    name = "infrastructure",
+    srcs = [
+        "__init__.py",
+        "pillow_renderer.py",
+    ],
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//pdf_toolkit/photo_context",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//pillow",
+        "@pypi//pillow_heif",
+    ],
+)
