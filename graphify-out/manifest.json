@@ -1,0 +1,482 @@
+{
+  ".mcp.json": {
+    "mtime": 1784097997.207696,
+    "ast_hash": "60857253bb0cfe61468bbc2b0ab9c1ca",
+    "semantic_hash": "60857253bb0cfe61468bbc2b0ab9c1ca"
+  },
+  "go/cli/main.go": {
+    "mtime": 1784096585.8017216,
+    "ast_hash": "06a41f94d9ba95e8194534e28471a128",
+    "semantic_hash": "06a41f94d9ba95e8194534e28471a128"
+  },
+  "go/go.mod": {
+    "mtime": 1784096585.8018095,
+    "ast_hash": "5eb92e4dfed1b1452493e18957523bcb",
+    "semantic_hash": "5eb92e4dfed1b1452493e18957523bcb"
+  },
+  "go/imagecontext/domain.go": {
+    "mtime": 1784096585.8020155,
+    "ast_hash": "1a3869354da207be6ded20eb329e4a08",
+    "semantic_hash": "1a3869354da207be6ded20eb329e4a08"
+  },
+  "go/imagecontext/infra_xdraw.go": {
+    "mtime": 1784096585.802097,
+    "ast_hash": "0ba8608d61c7afe63ad776aa0cb0f019",
+    "semantic_hash": "0ba8608d61c7afe63ad776aa0cb0f019"
+  },
+  "go/pdfcontext/domain.go": {
+    "mtime": 1784096585.8023221,
+    "ast_hash": "e0cc2416f665848f1e9129ac74825b73",
+    "semantic_hash": "e0cc2416f665848f1e9129ac74825b73"
+  },
+  "go/pdfcontext/infra_ghostscript.go": {
+    "mtime": 1784096585.8023946,
+    "ast_hash": "2d6b016ff99bdcde5610df4b982606fc",
+    "semantic_hash": "2d6b016ff99bdcde5610df4b982606fc"
+  },
+  "go/pdfcontext/infra_pdfcpu.go": {
+    "mtime": 1784096585.8024652,
+    "ast_hash": "5a95bdfbdee0d5d345b09d1eebc05a0e",
+    "semantic_hash": "5a95bdfbdee0d5d345b09d1eebc05a0e"
+  },
+  "go/pdfcontext/ports.go": {
+    "mtime": 1784096585.8025355,
+    "ast_hash": "eeb996dbe186dfd667e9505f26139668",
+    "semantic_hash": "eeb996dbe186dfd667e9505f26139668"
+  },
+  "go/pdfcontext/services.go": {
+    "mtime": 1784096585.802609,
+    "ast_hash": "8f9548f367493ad6860c8f646785c78f",
+    "semantic_hash": "8f9548f367493ad6860c8f646785c78f"
+  },
+  "go/pdfcontext/services_test.go": {
+    "mtime": 1784096585.8027017,
+    "ast_hash": "066459766d3103db4f39f542af79202c",
+    "semantic_hash": "066459766d3103db4f39f542af79202c"
+  },
+  "go/sharedkernel/kernel.go": {
+    "mtime": 1784096585.8028848,
+    "ast_hash": "e1177b57f3100e1299883c0e9035b826",
+    "semantic_hash": "e1177b57f3100e1299883c0e9035b826"
+  },
+  "pdf_toolkit/__init__.py": {
+    "mtime": 1784096585.8030295,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "pdf_toolkit/api/__init__.py": {
+    "mtime": 1784098132.3167207,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "pdf_toolkit/api/app.py": {
+    "mtime": 1784142874.909383,
+    "ast_hash": "eb0a9e265cb2459314fc885426dc30ef",
+    "semantic_hash": "eb0a9e265cb2459314fc885426dc30ef"
+  },
+  "pdf_toolkit/api/app_test.py": {
+    "mtime": 1784102971.9875586,
+    "ast_hash": "acd7827a71449281379a75ac8223ca49",
+    "semantic_hash": "acd7827a71449281379a75ac8223ca49"
+  },
+  "pdf_toolkit/cli/__init__.py": {
+    "mtime": 1784096585.8032727,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "pdf_toolkit/cli/main.py": {
+    "mtime": 1784142874.8966436,
+    "ast_hash": "c5ad16d27a0c5d3d22bb0dcf35843115",
+    "semantic_hash": "c5ad16d27a0c5d3d22bb0dcf35843115"
+  },
+  "pdf_toolkit/conftest.py": {
+    "mtime": 1784143089.0494263,
+    "ast_hash": "ebbd1697353d2cf35947d376498c5157",
+    "semantic_hash": "ebbd1697353d2cf35947d376498c5157"
+  },
+  "pdf_toolkit/contracts_test.py": {
+    "mtime": 1784142988.7588558,
+    "ast_hash": "5229cc4a81bd42426f68c15b5769fd6a",
+    "semantic_hash": "5229cc4a81bd42426f68c15b5769fd6a"
+  },
+  "pdf_toolkit/image_context/__init__.py": {
+    "mtime": 1784096585.8036463,
+    "ast_hash": "e98f7721999afb453e7bc216de278f10",
+    "semantic_hash": "e98f7721999afb453e7bc216de278f10"
+  },
+  "pdf_toolkit/image_context/application.py": {
+    "mtime": 1784142719.015723,
+    "ast_hash": "de991dc202bc7a1ab936d3f0564639d7",
+    "semantic_hash": "de991dc202bc7a1ab936d3f0564639d7"
+  },
+  "pdf_toolkit/image_context/infrastructure/__init__.py": {
+    "mtime": 1784096585.8038857,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "pdf_toolkit/image_context/infrastructure/lossless.py": {
+    "mtime": 1784098513.8007367,
+    "ast_hash": "2db269cb467184b056ba3424f26ace88",
+    "semantic_hash": "2db269cb467184b056ba3424f26ace88"
+  },
+  "pdf_toolkit/image_context/infrastructure/pillow_codec.py": {
+    "mtime": 1784142719.016093,
+    "ast_hash": "4915d474f4de6f2fa4c3624ecb37fe8a",
+    "semantic_hash": "4915d474f4de6f2fa4c3624ecb37fe8a"
+  },
+  "pdf_toolkit/image_context/infrastructure/ssim_meter.py": {
+    "mtime": 1784098513.801334,
+    "ast_hash": "6f7dddc509925f8a2063f1edfe9da410",
+    "semantic_hash": "6f7dddc509925f8a2063f1edfe9da410"
+  },
+  "pdf_toolkit/image_context/lossless_test.py": {
+    "mtime": 1784102971.9875567,
+    "ast_hash": "2d2e65093614321b953afabf27814de9",
+    "semantic_hash": "2d2e65093614321b953afabf27814de9"
+  },
+  "pdf_toolkit/image_context/ports.py": {
+    "mtime": 1784142719.0158095,
+    "ast_hash": "e9fdfb62d002c640df979bc172502e06",
+    "semantic_hash": "e9fdfb62d002c640df979bc172502e06"
+  },
+  "pdf_toolkit/image_context/recompress_test.py": {
+    "mtime": 1784142890.3728712,
+    "ast_hash": "6c977c96fe622f44786e4a2bb58bb841",
+    "semantic_hash": "6c977c96fe622f44786e4a2bb58bb841"
+  },
+  "pdf_toolkit/mcp_server/__init__.py": {
+    "mtime": 1784097997.2194595,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "pdf_toolkit/mcp_server/server.py": {
+    "mtime": 1784143543.715773,
+    "ast_hash": "24db2c036e8548de6c44067fc1aafb7d",
+    "semantic_hash": "24db2c036e8548de6c44067fc1aafb7d"
+  },
+  "pdf_toolkit/pdf_context/__init__.py": {
+    "mtime": 1784142719.0168135,
+    "ast_hash": "144b93216d77881146b8a2a28ff1b968",
+    "semantic_hash": "144b93216d77881146b8a2a28ff1b968"
+  },
+  "pdf_toolkit/pdf_context/application.py": {
+    "mtime": 1784142812.049038,
+    "ast_hash": "002de833c47a80e9eeaea8995103b76f",
+    "semantic_hash": "002de833c47a80e9eeaea8995103b76f"
+  },
+  "pdf_toolkit/pdf_context/domain.py": {
+    "mtime": 1784142874.8959699,
+    "ast_hash": "a1e6ae97034d86f6cb182bc4be2adc7a",
+    "semantic_hash": "a1e6ae97034d86f6cb182bc4be2adc7a"
+  },
+  "pdf_toolkit/pdf_context/infrastructure/__init__.py": {
+    "mtime": 1784096585.8046405,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "pdf_toolkit/pdf_context/infrastructure/agpl/__init__.py": {
+    "mtime": 1784096585.8048031,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "pdf_toolkit/pdf_context/infrastructure/agpl/native_compressor.py": {
+    "mtime": 1784142763.9948204,
+    "ast_hash": "f8a1d0d1b2259dd607f23988ba04b016",
+    "semantic_hash": "f8a1d0d1b2259dd607f23988ba04b016"
+  },
+  "pdf_toolkit/pdf_context/infrastructure/agpl/pymupdf_codec.py": {
+    "mtime": 1784142874.9092293,
+    "ast_hash": "9f5fce0bb8313dae4153a8d335befd95",
+    "semantic_hash": "9f5fce0bb8313dae4153a8d335befd95"
+  },
+  "pdf_toolkit/pdf_context/infrastructure/ghostscript_compressor.py": {
+    "mtime": 1784142763.9945457,
+    "ast_hash": "d2c10e07e0bb03d58aa727541d06639f",
+    "semantic_hash": "d2c10e07e0bb03d58aa727541d06639f"
+  },
+  "pdf_toolkit/pdf_context/infrastructure/pikepdf_compressor.py": {
+    "mtime": 1784142733.311182,
+    "ast_hash": "b5b1cc27558d189650e44337800d6e51",
+    "semantic_hash": "b5b1cc27558d189650e44337800d6e51"
+  },
+  "pdf_toolkit/pdf_context/infrastructure/pikepdf_inspector.py": {
+    "mtime": 1784142719.0166152,
+    "ast_hash": "935c8c2c0baa6ed3f994ef9b39ac43b6",
+    "semantic_hash": "935c8c2c0baa6ed3f994ef9b39ac43b6"
+  },
+  "pdf_toolkit/pdf_context/infrastructure/pikepdf_lossless.py": {
+    "mtime": 1784142719.016204,
+    "ast_hash": "36c0e35f5c21bf92c446b4fd73e00eb4",
+    "semantic_hash": "36c0e35f5c21bf92c446b4fd73e00eb4"
+  },
+  "pdf_toolkit/pdf_context/infrastructure/pikepdf_merger.py": {
+    "mtime": 1784142812.049178,
+    "ast_hash": "6e639904e08913acc79a612d345255d5",
+    "semantic_hash": "6e639904e08913acc79a612d345255d5"
+  },
+  "pdf_toolkit/pdf_context/lossless_test.py": {
+    "mtime": 1784102971.9877274,
+    "ast_hash": "8808baac579f35264c13b94b5c82133c",
+    "semantic_hash": "8808baac579f35264c13b94b5c82133c"
+  },
+  "pdf_toolkit/pdf_context/ports.py": {
+    "mtime": 1784142719.0154393,
+    "ast_hash": "2e3ce9600299ec3b6c767336182fe5d7",
+    "semantic_hash": "2e3ce9600299ec3b6c767336182fe5d7"
+  },
+  "pdf_toolkit/pdf_context/services.py": {
+    "mtime": 1784142874.9090862,
+    "ast_hash": "d40ace1daaa1d26acd3fecbcb6d86cb7",
+    "semantic_hash": "d40ace1daaa1d26acd3fecbcb6d86cb7"
+  },
+  "pdf_toolkit/photo_context/__init__.py": {
+    "mtime": 1784097733.1138003,
+    "ast_hash": "ec21551e2a70ede046b9eeb1b94ad350",
+    "semantic_hash": "ec21551e2a70ede046b9eeb1b94ad350"
+  },
+  "pdf_toolkit/photo_context/application.py": {
+    "mtime": 1784142863.3005142,
+    "ast_hash": "e433c0a376bebc06c4cbce52b57c26a6",
+    "semantic_hash": "e433c0a376bebc06c4cbce52b57c26a6"
+  },
+  "pdf_toolkit/photo_context/application_test.py": {
+    "mtime": 1784143025.0579786,
+    "ast_hash": "e31cd27b54b20c8e0c3ccfbc6ace89b7",
+    "semantic_hash": "e31cd27b54b20c8e0c3ccfbc6ace89b7"
+  },
+  "pdf_toolkit/photo_context/domain.py": {
+    "mtime": 1784142812.0493014,
+    "ast_hash": "2d15a639d6fac0c9a631763c9235b9c0",
+    "semantic_hash": "2d15a639d6fac0c9a631763c9235b9c0"
+  },
+  "pdf_toolkit/photo_context/infrastructure/__init__.py": {
+    "mtime": 1784097740.473562,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "pdf_toolkit/photo_context/infrastructure/pillow_renderer.py": {
+    "mtime": 1784142874.9091942,
+    "ast_hash": "5ea7fc10d319ef6f237031782ddadb9f",
+    "semantic_hash": "5ea7fc10d319ef6f237031782ddadb9f"
+  },
+  "pdf_toolkit/photo_context/ports.py": {
+    "mtime": 1784098513.8004167,
+    "ast_hash": "46092547dc988f755d80c189dcc877a4",
+    "semantic_hash": "46092547dc988f755d80c189dcc877a4"
+  },
+  "pdf_toolkit/photo_context/services.py": {
+    "mtime": 1784098513.8003254,
+    "ast_hash": "6665a45b914220f390d3ab4f4ff1771a",
+    "semantic_hash": "6665a45b914220f390d3ab4f4ff1771a"
+  },
+  "pdf_toolkit/photo_context/services_test.py": {
+    "mtime": 1784102971.9877226,
+    "ast_hash": "2edb314aa33d95a13105d860fa10ddd1",
+    "semantic_hash": "2edb314aa33d95a13105d860fa10ddd1"
+  },
+  "pdf_toolkit/shared_kernel/__init__.py": {
+    "mtime": 1784142874.909289,
+    "ast_hash": "8e768ef902157800ef98671566d2245e",
+    "semantic_hash": "8e768ef902157800ef98671566d2245e"
+  },
+  "pyproject.toml": {
+    "mtime": 1784144018.463421,
+    "ast_hash": "e73d421cd018907e8c0538d3fa77aeed",
+    "semantic_hash": "e73d421cd018907e8c0538d3fa77aeed"
+  },
+  "rust/src/bin/pdftoolkit.rs": {
+    "mtime": 1784096585.80623,
+    "ast_hash": "2ec83353d5d55f793a2e911a60d15f39",
+    "semantic_hash": "2ec83353d5d55f793a2e911a60d15f39"
+  },
+  "rust/src/image_context/domain.rs": {
+    "mtime": 1784096585.806354,
+    "ast_hash": "04d3dfdc9a155515925af69f61e38032",
+    "semantic_hash": "04d3dfdc9a155515925af69f61e38032"
+  },
+  "rust/src/image_context/infra_image.rs": {
+    "mtime": 1784096585.806443,
+    "ast_hash": "3122c9a5af4a529212364be1d9520dea",
+    "semantic_hash": "3122c9a5af4a529212364be1d9520dea"
+  },
+  "rust/src/image_context/mod.rs": {
+    "mtime": 1784096585.806532,
+    "ast_hash": "3cd7c643cfb11a9de87acd0eada19b3d",
+    "semantic_hash": "3cd7c643cfb11a9de87acd0eada19b3d"
+  },
+  "rust/src/image_context/ports.rs": {
+    "mtime": 1784096585.8066227,
+    "ast_hash": "b7a90466c4dbb8f696898e16b1181793",
+    "semantic_hash": "b7a90466c4dbb8f696898e16b1181793"
+  },
+  "rust/src/lib.rs": {
+    "mtime": 1784096585.8067067,
+    "ast_hash": "63241ada2a69f3f7b71dffa62e9f54fc",
+    "semantic_hash": "63241ada2a69f3f7b71dffa62e9f54fc"
+  },
+  "rust/src/pdf_context/domain.rs": {
+    "mtime": 1784096585.8068347,
+    "ast_hash": "b6dcc5d23193d211c8c9aa56341e5441",
+    "semantic_hash": "b6dcc5d23193d211c8c9aa56341e5441"
+  },
+  "rust/src/pdf_context/infra_ghostscript.rs": {
+    "mtime": 1784096585.8069212,
+    "ast_hash": "76333ce39473d5465f293edd2869fcc0",
+    "semantic_hash": "76333ce39473d5465f293edd2869fcc0"
+  },
+  "rust/src/pdf_context/infra_lopdf.rs": {
+    "mtime": 1784096585.8070142,
+    "ast_hash": "7e68e11dabee6f3ca4a82b6f713f3624",
+    "semantic_hash": "7e68e11dabee6f3ca4a82b6f713f3624"
+  },
+  "rust/src/pdf_context/mod.rs": {
+    "mtime": 1784096585.807103,
+    "ast_hash": "da934ca33b67f7defd9b41501676ca71",
+    "semantic_hash": "da934ca33b67f7defd9b41501676ca71"
+  },
+  "rust/src/pdf_context/ports.rs": {
+    "mtime": 1784096585.807173,
+    "ast_hash": "0bbb239a0dffa3c4da66fd5397d9b35a",
+    "semantic_hash": "0bbb239a0dffa3c4da66fd5397d9b35a"
+  },
+  "rust/src/pdf_context/services.rs": {
+    "mtime": 1784096585.807243,
+    "ast_hash": "9c73559c982cc062cd51863b580e8d23",
+    "semantic_hash": "9c73559c982cc062cd51863b580e8d23"
+  },
+  "rust/src/shared_kernel.rs": {
+    "mtime": 1784096585.8073092,
+    "ast_hash": "466b312665ef5bbcffd2b700b3e2552e",
+    "semantic_hash": "466b312665ef5bbcffd2b700b3e2552e"
+  },
+  "tools/cli.sh": {
+    "mtime": 1784101849.4611077,
+    "ast_hash": "770ce02e5e8feed02bcb79a9487d6f18",
+    "semantic_hash": "770ce02e5e8feed02bcb79a9487d6f18"
+  },
+  "tools/install-hooks.sh": {
+    "mtime": 1784098217.9650514,
+    "ast_hash": "59d7fb42293ec31d53e4645b5b04c1b7",
+    "semantic_hash": "59d7fb42293ec31d53e4645b5b04c1b7"
+  },
+  "tools/lock.sh": {
+    "mtime": 1784143983.1345274,
+    "ast_hash": "bfb2bc87172c2507d0f9aa67dc3434d1",
+    "semantic_hash": "bfb2bc87172c2507d0f9aa67dc3434d1"
+  },
+  "tools/mcp-bazel.sh": {
+    "mtime": 1784144983.1123338,
+    "ast_hash": "09b833a670c71c468d49df46d6739f54",
+    "semantic_hash": "09b833a670c71c468d49df46d6739f54"
+  },
+  "tools/mcp.sh": {
+    "mtime": 1784143310.2171981,
+    "ast_hash": "8087c7b1c62a018644d0dfa8f160257f",
+    "semantic_hash": "8087c7b1c62a018644d0dfa8f160257f"
+  },
+  "tools/pre-commit.sh": {
+    "mtime": 1784146309.5358746,
+    "ast_hash": "1208b02d2a004fca2d5e1dc7cbffdfda",
+    "semantic_hash": ""
+  },
+  "tools/venv.sh": {
+    "mtime": 1784143979.2857904,
+    "ast_hash": "c87d06fd3052bf0c55b9b731e8321a69",
+    "semantic_hash": "c87d06fd3052bf0c55b9b731e8321a69"
+  },
+  ".claude/skills/doc-toolkit-router/SKILL.md": {
+    "mtime": 1784143664.421669,
+    "ast_hash": "8e8414546b644d2b54f0282bcb170297",
+    "semantic_hash": "8e8414546b644d2b54f0282bcb170297"
+  },
+  ".claude/skills/passport-photo/SKILL.md": {
+    "mtime": 1784101919.840399,
+    "ast_hash": "632c62c4c0046bcfa26b6fcd053be1ec",
+    "semantic_hash": "632c62c4c0046bcfa26b6fcd053be1ec"
+  },
+  ".claude/skills/print-sheet/SKILL.md": {
+    "mtime": 1784101876.5641718,
+    "ast_hash": "7c0024c19f32400c89033beef1d679a1",
+    "semantic_hash": "7c0024c19f32400c89033beef1d679a1"
+  },
+  ".claude/skills/shrink-file/SKILL.md": {
+    "mtime": 1784101876.5642955,
+    "ast_hash": "dcaa6ae102bf9c023582e9a46655f55a",
+    "semantic_hash": "dcaa6ae102bf9c023582e9a46655f55a"
+  },
+  "CLAUDE.md": {
+    "mtime": 1784142539.5488734,
+    "ast_hash": "819d45efe8bcbf72ca1f3bbe3dda5c9a",
+    "semantic_hash": "819d45efe8bcbf72ca1f3bbe3dda5c9a"
+  },
+  "DOMAIN.md": {
+    "mtime": 1784143025.0581043,
+    "ast_hash": "3a8fd6c1d5521a54475b8c76bd7bce46",
+    "semantic_hash": "3a8fd6c1d5521a54475b8c76bd7bce46"
+  },
+  "dependencies/python/requirements-darwin-aarch64.txt": {
+    "mtime": 1784102947.3277369,
+    "ast_hash": "3717a013ee4235af3646b2188d6bcf84",
+    "semantic_hash": "3717a013ee4235af3646b2188d6bcf84"
+  },
+  "dependencies/python/requirements-linux-x86_64.txt": {
+    "mtime": 1784102947.3476887,
+    "ast_hash": "f1ca3179ebb75b1487516c1d085ce263",
+    "semantic_hash": "f1ca3179ebb75b1487516c1d085ce263"
+  },
+  "docs/ANALYSIS.md": {
+    "mtime": 1784096585.8011844,
+    "ast_hash": "99bc161be53d35c9b9570c9f45a1e82a",
+    "semantic_hash": "99bc161be53d35c9b9570c9f45a1e82a"
+  },
+  "docs/BAZEL_MIGRATION.md": {
+    "mtime": 1784096585.8013012,
+    "ast_hash": "23e2c58e43aeecb6f63ff5d8264f9ffc",
+    "semantic_hash": "23e2c58e43aeecb6f63ff5d8264f9ffc"
+  },
+  "docs/HLD.md": {
+    "mtime": 1784138629.0007014,
+    "ast_hash": "6f43c94d24f888487a7d6ab056d636eb",
+    "semantic_hash": "6f43c94d24f888487a7d6ab056d636eb"
+  },
+  "docs/LLD.md": {
+    "mtime": 1784138663.3454728,
+    "ast_hash": "fd473f5013ac886d8d9ff6d5d3205b80",
+    "semantic_hash": "fd473f5013ac886d8d9ff6d5d3205b80"
+  },
+  "docs/OS_CS_ALGOS_PRIMITIVES.md": {
+    "mtime": 1784138709.0548456,
+    "ast_hash": "d0824ad80d963bbbac0c1dc91a8cfa10",
+    "semantic_hash": "d0824ad80d963bbbac0c1dc91a8cfa10"
+  },
+  "docs/PLAN.md": {
+    "mtime": 1784144059.0081627,
+    "ast_hash": "d02e281ad6761a42906c4973528478f3",
+    "semantic_hash": "d02e281ad6761a42906c4973528478f3"
+  },
+  "docs/PRD.md": {
+    "mtime": 1784138582.1696234,
+    "ast_hash": "0b9e0f11425103423d72ce4f49b38d82",
+    "semantic_hash": "0b9e0f11425103423d72ce4f49b38d82"
+  },
+  "docs/RESEARCH.md": {
+    "mtime": 1784138405.036985,
+    "ast_hash": "d514173d5a2cfd97a43133fae28c5ea5",
+    "semantic_hash": "d514173d5a2cfd97a43133fae28c5ea5"
+  },
+  "docs/REVIEW.md": {
+    "mtime": 1784127967.6823359,
+    "ast_hash": "fd500c84339b5b500920ce918e1ab84e",
+    "semantic_hash": "fd500c84339b5b500920ce918e1ab84e"
+  },
+  "gazelle_python.yaml": {
+    "mtime": 1784102949.6848743,
+    "ast_hash": "3fab2a86488ec67d14c157c396190394",
+    "semantic_hash": "3fab2a86488ec67d14c157c396190394"
+  },
+  "skills/doc-toolkit-router/SKILL.md": {
+    "mtime": 1784143651.7944365,
+    "ast_hash": "8e8414546b644d2b54f0282bcb170297",
+    "semantic_hash": "8e8414546b644d2b54f0282bcb170297"
+  }
+}

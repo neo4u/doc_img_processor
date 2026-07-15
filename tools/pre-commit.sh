@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
-# Pre-commit gate: lint → format → types → tests → BUILD drift.
+# Pre-commit gate: lint → format → types → tests → BUILD drift → graph refresh.
 # Run directly, via `bazel run //:pre-commit`, or as .git/hooks/pre-commit
 # (tools/install-hooks.sh). Fails fast on the first broken check.
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# Resolve symlinks first — as .git/hooks/pre-commit, BASH_SOURCE is the symlink
+# and dirname would land in .git/ (readlink -f follows it back to tools/).
+SELF="$(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null || echo "${BASH_SOURCE[0]}")"
+ROOT="$(cd "$(dirname "$SELF")/.." && pwd)"
 cd "$ROOT"
 PY="$ROOT/.venv/bin"
 
@@ -28,6 +31,15 @@ if command -v bazel >/dev/null 2>&1; then
     || { echo "BUILD files out of date — run: bazel run //:gazelle"; exit 1; }
 else
   echo "  (bazel not installed — skipped; install bazelisk to enable)"
+fi
+
+echo "── 6/6 knowledge graph refresh (graphify)"
+if command -v graphify >/dev/null 2>&1 && [ -f "$ROOT/graphify-out/graph.json" ] && [ "${SKIP_GRAPH:-}" != "1" ]; then
+  graphify update "$ROOT" --no-cluster >/dev/null 2>&1 \
+    && git -C "$ROOT" add graphify-out 2>/dev/null \
+    || echo "  (graph update failed — commit proceeds; run 'graphify update .' manually)"
+else
+  echo "  (skipped: no graphify/graph.json or SKIP_GRAPH=1)"
 fi
 
 echo "✔ all pre-commit checks passed"
