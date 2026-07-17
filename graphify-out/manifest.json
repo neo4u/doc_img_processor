@@ -70,9 +70,9 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "pdf_toolkit/api/app.py": {
-    "mtime": 1784142874.909383,
-    "ast_hash": "eb0a9e265cb2459314fc885426dc30ef",
-    "semantic_hash": "eb0a9e265cb2459314fc885426dc30ef"
+    "mtime": 1784262763.4171028,
+    "ast_hash": "c95f1047107c99e4136893a1d62a8909",
+    "semantic_hash": ""
   },
   "pdf_toolkit/api/app_test.py": {
     "mtime": 1784102971.9875586,
@@ -85,9 +85,9 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "pdf_toolkit/cli/main.py": {
-    "mtime": 1784142874.8966436,
-    "ast_hash": "c5ad16d27a0c5d3d22bb0dcf35843115",
-    "semantic_hash": "c5ad16d27a0c5d3d22bb0dcf35843115"
+    "mtime": 1784262666.2183697,
+    "ast_hash": "037e0f90eb1b83e123fd86f278544074",
+    "semantic_hash": ""
   },
   "pdf_toolkit/conftest.py": {
     "mtime": 1784143089.0494263,
@@ -150,9 +150,9 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "pdf_toolkit/mcp_server/server.py": {
-    "mtime": 1784143543.715773,
-    "ast_hash": "24db2c036e8548de6c44067fc1aafb7d",
-    "semantic_hash": "24db2c036e8548de6c44067fc1aafb7d"
+    "mtime": 1784262584.6503294,
+    "ast_hash": "f382a6a07b908f2dcfd209f44a7d2f9c",
+    "semantic_hash": ""
   },
   "pdf_toolkit/pdf_context/__init__.py": {
     "mtime": 1784142719.0168135,
@@ -190,19 +190,19 @@
     "semantic_hash": "9f5fce0bb8313dae4153a8d335befd95"
   },
   "pdf_toolkit/pdf_context/infrastructure/ghostscript_compressor.py": {
-    "mtime": 1784142763.9945457,
-    "ast_hash": "d2c10e07e0bb03d58aa727541d06639f",
-    "semantic_hash": "d2c10e07e0bb03d58aa727541d06639f"
+    "mtime": 1784262805.514695,
+    "ast_hash": "b7a85fcd9b6d330300aa26fa0181b77b",
+    "semantic_hash": ""
   },
   "pdf_toolkit/pdf_context/infrastructure/pikepdf_compressor.py": {
-    "mtime": 1784142733.311182,
-    "ast_hash": "b5b1cc27558d189650e44337800d6e51",
-    "semantic_hash": "b5b1cc27558d189650e44337800d6e51"
+    "mtime": 1784262763.417064,
+    "ast_hash": "03764f006aaf66668916f7cdf5ef4c15",
+    "semantic_hash": ""
   },
   "pdf_toolkit/pdf_context/infrastructure/pikepdf_inspector.py": {
-    "mtime": 1784142719.0166152,
-    "ast_hash": "935c8c2c0baa6ed3f994ef9b39ac43b6",
-    "semantic_hash": "935c8c2c0baa6ed3f994ef9b39ac43b6"
+    "mtime": 1784262763.4047396,
+    "ast_hash": "939d7ffd44c11e7113c203f04547386e",
+    "semantic_hash": ""
   },
   "pdf_toolkit/pdf_context/infrastructure/pikepdf_lossless.py": {
     "mtime": 1784142719.016204,
@@ -255,9 +255,9 @@
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
   },
   "pdf_toolkit/photo_context/infrastructure/pillow_renderer.py": {
-    "mtime": 1784142874.9091942,
-    "ast_hash": "5ea7fc10d319ef6f237031782ddadb9f",
-    "semantic_hash": "5ea7fc10d319ef6f237031782ddadb9f"
+    "mtime": 1784262465.5935657,
+    "ast_hash": "de70bf69b807d311df885ed17f12209f",
+    "semantic_hash": ""
   },
   "pdf_toolkit/photo_context/ports.py": {
     "mtime": 1784098513.8004167,
@@ -275,14 +275,14 @@
     "semantic_hash": "2edb314aa33d95a13105d860fa10ddd1"
   },
   "pdf_toolkit/shared_kernel/__init__.py": {
-    "mtime": 1784142874.909289,
-    "ast_hash": "8e768ef902157800ef98671566d2245e",
-    "semantic_hash": "8e768ef902157800ef98671566d2245e"
+    "mtime": 1784262431.1053607,
+    "ast_hash": "a9e3cdc1acc10fcc76d2e4d3f5bc6a62",
+    "semantic_hash": ""
   },
   "pyproject.toml": {
-    "mtime": 1784144018.463421,
-    "ast_hash": "e73d421cd018907e8c0538d3fa77aeed",
-    "semantic_hash": "e73d421cd018907e8c0538d3fa77aeed"
+    "mtime": 1784262805.5145898,
+    "ast_hash": "09413a6ad5e66b207d46bddb14e65136",
+    "semantic_hash": ""
   },
   "rust/src/bin/pdftoolkit.rs": {
     "mtime": 1784096585.80623,
@@ -350,9 +350,9 @@
     "semantic_hash": "466b312665ef5bbcffd2b700b3e2552e"
   },
   "tools/cli.sh": {
-    "mtime": 1784101849.4611077,
-    "ast_hash": "770ce02e5e8feed02bcb79a9487d6f18",
-    "semantic_hash": "770ce02e5e8feed02bcb79a9487d6f18"
+    "mtime": 1784262612.472871,
+    "ast_hash": "bb637e1132b8019fe9596af43751cccf",
+    "semantic_hash": ""
   },
   "tools/install-hooks.sh": {
     "mtime": 1784098217.9650514,
@@ -440,9 +440,9 @@
     "semantic_hash": "6f43c94d24f888487a7d6ab056d636eb"
   },
   "docs/LLD.md": {
-    "mtime": 1784138663.3454728,
-    "ast_hash": "fd473f5013ac886d8d9ff6d5d3205b80",
-    "semantic_hash": "fd473f5013ac886d8d9ff6d5d3205b80"
+    "mtime": 1784262863.6453407,
+    "ast_hash": "31125f1d27d216b9fc96e22b5871545c",
+    "semantic_hash": ""
   },
   "docs/OS_CS_ALGOS_PRIMITIVES.md": {
     "mtime": 1784138709.0548456,
@@ -450,9 +450,9 @@
     "semantic_hash": "d0824ad80d963bbbac0c1dc91a8cfa10"
   },
   "docs/PLAN.md": {
-    "mtime": 1784144059.0081627,
-    "ast_hash": "d02e281ad6761a42906c4973528478f3",
-    "semantic_hash": "d02e281ad6761a42906c4973528478f3"
+    "mtime": 1784262863.6450868,
+    "ast_hash": "129f421b13eca42cb942a51eb1c19dcc",
+    "semantic_hash": ""
   },
   "docs/PRD.md": {
     "mtime": 1784138582.1696234,
@@ -482,6 +482,21 @@
   "PRASANTH_TODO.md": {
     "mtime": 1784146767.3499804,
     "ast_hash": "25573ec4c0c3185f8d9ae99c315d16d6",
+    "semantic_hash": ""
+  },
+  "pdf_toolkit/api/hardening_test.py": {
+    "mtime": 1784262805.514438,
+    "ast_hash": "022bc36b365ce03b48386c9ef1cdb159",
+    "semantic_hash": ""
+  },
+  "pdf_toolkit/mcp_server/server_test.py": {
+    "mtime": 1784262763.4052541,
+    "ast_hash": "6af3247faaff1f9346b79e2955060a39",
+    "semantic_hash": ""
+  },
+  "pdf_toolkit/pdf_context/ghostscript_test.py": {
+    "mtime": 1784262718.3008406,
+    "ast_hash": "7d3e832047019baf428e0c0ad494b348",
     "semantic_hash": ""
   }
 }

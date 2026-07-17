@@ -22,7 +22,14 @@ from pdf_toolkit.pdf_context.infrastructure.agpl.pymupdf_codec import PyMuPdfIns
 from pdf_toolkit.pdf_context.infrastructure.ghostscript_compressor import GhostscriptCompressor
 from pdf_toolkit.pdf_context.infrastructure.pikepdf_compressor import PikepdfCompressor
 from pdf_toolkit.photo_context.domain import SHEETS
-from pdf_toolkit.shared_kernel import DEFAULT_TARGET_KB, ByteBudget, CompressionTarget, Metric, QualityFloor
+from pdf_toolkit.shared_kernel import (
+    DEFAULT_TARGET_KB,
+    ByteBudget,
+    CompressionTarget,
+    InvalidInput,
+    Metric,
+    QualityFloor,
+)
 
 
 def build_engines() -> dict[str, object]:
@@ -305,7 +312,13 @@ def main() -> None:
     pb.set_defaults(fn=cmd_benchmark)
 
     args = p.parse_args()
-    args.fn(args)
+    try:
+        args.fn(args)
+    except (InvalidInput, FileNotFoundError) as e:
+        # Domain/user errors: message not traceback, exit 2 (LLD §Errors) —
+        # the skills that shell out depend on this contract.
+        print(f"error: {e}", file=sys.stderr)
+        sys.exit(2)
 
 
 if __name__ == "__main__":

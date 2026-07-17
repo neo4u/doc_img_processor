@@ -11,7 +11,6 @@ license-clean primary path for the future hosted UI (no AGPL §13 network copyle
 
 from __future__ import annotations
 
-import contextlib
 import time
 from pathlib import Path
 
@@ -26,13 +25,19 @@ from pdf_toolkit.pdf_context.domain import Codec, CompressionResult, DocumentCen
 from pdf_toolkit.pdf_context.ports import Compressor
 from pdf_toolkit.pdf_context.services import BudgetDecomposition
 from pdf_toolkit.shared_kernel import (
+    MAX_PDF_PAGES,
     CompressionTarget,
     EffectiveDpi,
     ImageKind,
+    InvalidInput,
     MediaFile,
     Metric,
     PerceptualScore,
+    UnreadableDocument,
+    get_logger,
 )
+
+_log = get_logger(__name__)
 
 _CS_KIND = {"/DeviceGray": ImageKind.GRAYSCALE, "/DeviceRGB": ImageKind.COLOR, "/DeviceCMYK": ImageKind.COLOR}
 
@@ -61,11 +66,23 @@ class PikepdfCompressor(Compressor):
         start = time.monotonic()
         ceiling = target.budget.ceiling()
         if source.size_bytes <= ceiling:
+            # Validate even on the passthrough path — garbage in must not 200 out.
+            try:
+                pikepdf.open(source.path).close()
+            except pikepdf.PdfError as e:
+                raise UnreadableDocument(f"{source.path.name} is not a readable PDF: {e}") from e
             out.write_bytes(source.path.read_bytes())
             return self._result(source, out, 0, 0, None, start)
 
-        pdf = pikepdf.open(source.path)
         try:
+            pdf = pikepdf.open(source.path)
+        except pikepdf.PasswordError as e:
+            raise UnreadableDocument(f"{source.path.name} is password-protected") from e
+        except pikepdf.PdfError as e:
+            raise UnreadableDocument(f"{source.path.name} is not a readable PDF: {e}") from e
+        try:
+            if len(pdf.pages) > MAX_PDF_PAGES:
+                raise InvalidInput(f"{source.path.name} has {len(pdf.pages)} pages — cap is {MAX_PDF_PAGES}")
             # Pass 1: census — collect (object, EmbeddedImage) with geometry DPI.
             entries: list[tuple[pikepdf.Object, EmbeddedImage]] = []
             image_bytes = 0
@@ -76,8 +93,12 @@ class PikepdfCompressor(Compressor):
                 for _, obj in page.get_images().items():
                     w, h = int(obj.Width), int(obj.Height)
                     kind = _image_kind(obj)
-                    with contextlib.suppress(Exception):
+                    try:
                         image_bytes += len(obj.read_raw_bytes())
+                    except pikepdf.PdfError as e:
+                        # Undercounting skews non_image_bytes and the budget split —
+                        # make it visible instead of silently absorbing it.
+                        _log.warning("census: unreadable image stream xref=%s: %s", obj.objgen[0], e)
                     eff = EffectiveDpi(pixels=w, rendered_inches=page_w_in or 1.0)
                     entries.append(
                         (
@@ -137,6 +158,13 @@ class PikepdfCompressor(Compressor):
             out.write_bytes(source.path.read_bytes())
             return self._result(source, out, 0, 0, None, start)
         if after > ceiling and self._escalation is not None:  # BudgetMissed -> GS
+            _log.warning(
+                "budget missed (%d > %d bytes) — escalating %s -> %s",
+                after,
+                ceiling,
+                self.name,
+                self._escalation.name,
+            )
             res = self._escalation.compress(source, target, out)
             return CompressionResult(
                 output=res.output,

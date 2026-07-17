@@ -38,14 +38,14 @@ workstream items marked **T**.
 - ✅ **T** gazelle re-run; pytest 29 (+1 slow) + bazel 8/8 green
 - ⬜ carry-over → W5: template-method extraction of twin compressor bodies (deferred — touches the same code as the W5 census rewrite; do together)
 
-### Wave 3 — Serving hardening (M) ⬜ (prior art: RESEARCH §4)
-- ⬜ Upload cap: middleware `Content-Length` + counted chunk copy → 413 (`MAX_UPLOAD_BYTES`, gotenberg pattern — *enabled* by default)
-- ⬜ Reject-before-decode: explicit `Image.MAX_IMAGE_PIXELS` (imgproxy 50 Mpx pattern), PDF page/image caps → 422; catch `DecompressionBombError`/`pikepdf.PdfError` → 413/422; logged 500 handler
-- ⬜ MCP path confinement: `DOC_TOOLKIT_ALLOWED_DIRS` checked in `_resolve` **and on outputs**; `list_allowed_dirs` tool (MCP filesystem-server norm); no-clobber unless `overwrite=True`
-- ⬜ Per-op timeout (30 s default, per-endpoint dict — Stirling pattern); gs subprocess `timeout=` + stderr in errors
-- ⬜ stdlib `logging` throughout (stderr on MCP stdio); correlation-id middleware; narrow `suppress(Exception)` → `pikepdf.PdfError` + warn
-- ⬜ Typed error set (`InvalidInput`, `UnreadableDocument`) in shared_kernel; deliberate mapping per surface (CLI exit 2 + top-level handler, HTTP 4xx/5xx, MCP isError)
-- ⬜ **T** tests: 413 oversize, 422 corrupt/bomb, allowlist rejection, no-clobber, timeout path
+### Wave 3 — Serving hardening (M) ✅ 2026-07-16 (prior art: RESEARCH §4)
+- ✅ Upload cap: declared-size check + counted chunk copy → 413 (`MAX_UPLOAD_BYTES` 50 MB, on by default)
+- ✅ Reject-before-decode: explicit `Image.MAX_IMAGE_PIXELS` (50 Mpx), `MAX_PDF_PAGES` (200) → 422; `DecompressionBombError`/`pikepdf.PdfError`/`PasswordError` → typed 422; logged 500 handler with correlation id; compressor passthrough now validates (garbage can't 200)
+- ✅ MCP path confinement: `DOC_TOOLKIT_ALLOWED_DIRS` (default `~`) on inputs **and outputs**; `list_allowed_dirs` tool; no-clobber unless `overwrite=True` (all 5 writing tools)
+- ✅ gs subprocess `timeout=SUBPROCESS_TIMEOUT_S` (120 s) + stderr tail in errors. *HTTP per-op preemptive timeout deliberately deferred to the pre-hosting process pool — a threadpool cannot cancel CPU-bound work; a fake timeout would lie*
+- ✅ stderr-only `get_logger` in shared_kernel; MCP per-tool instrumentation; API request logging + `X-Correlation-Id`; census `suppress(Exception)` → `pikepdf.PdfError` + warning; escalation logged
+- ✅ Typed errors `InvalidInput`/`UnreadableDocument` in shared_kernel; mapping: CLI stderr+exit 2 · HTTP 422/413/500 via app-wide handlers · MCP raise→isError. CLI launcher fixed to work from any cwd (PYTHONPATH, not cd)
+- ✅ **T** 17 new tests: 413 oversize, 422 corrupt (x2 paths), bomb, correlation-id echo/mint, logged-500, allowlist input+output, no-clobber+overwrite, MCP round-trips, gs timeout/stderr contracts
 
 ### Wave 4 — Testing completion (M) 🔄 (REVIEW axis 5–7)
 - ✅ **T** `conftest.py` created (fixtures: `portrait`, `jpeg_bytes`, `scan_pdf`, `api_client`); ⬜ migrate the 5 existing test files onto them

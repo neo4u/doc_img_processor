@@ -7,4 +7,7 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 [ -x "$ROOT/.venv/bin/python" ] || "$ROOT/tools/venv.sh"
-exec "$ROOT/.venv/bin/python" -m pdf_toolkit.cli.main "$@"
+# PYTHONPATH (not cd): the module must resolve from any cwd, while the user's
+# relative input paths keep resolving against THEIR cwd.
+exec env PYTHONPATH="$ROOT${PYTHONPATH:+:$PYTHONPATH}" \
+  "$ROOT/.venv/bin/python" -m pdf_toolkit.cli.main "$@"

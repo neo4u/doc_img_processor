@@ -1,4 +1,4 @@
-load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 py_library(
     name = "mcp_server",
@@ -32,5 +32,18 @@ py_binary(
         "//pdf_toolkit/photo_context/infrastructure",
         "//pdf_toolkit/shared_kernel",
         "@pypi//mcp",
+    ],
+)
+
+py_test(
+    name = "server_test",
+    srcs = ["server_test.py"],
+    deps = [
+        ":mcp_server",
+        "//pdf_toolkit:conftest",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//numpy",
+        "@pypi//pillow",
+        "@pypi//pytest",
     ],
 )

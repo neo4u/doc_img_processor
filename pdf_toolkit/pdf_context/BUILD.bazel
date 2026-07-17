@@ -26,3 +26,14 @@ py_test(
         "@pypi//pytest",
     ],
 )
+
+py_test(
+    name = "ghostscript_test",
+    srcs = ["ghostscript_test.py"],
+    deps = [
+        "//pdf_toolkit:conftest",
+        "//pdf_toolkit/pdf_context/infrastructure",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//pytest",
+    ],
+)

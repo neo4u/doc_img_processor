@@ -109,13 +109,14 @@ class YuNetFaceLocator(FaceLocator):         # cv2.FaceDetectorYN, 5 landmarks
 (verify-and-warn only; idify-schema shape).
 
 ### Config knobs (W3 — enabled by default)
-| Env | Default | Effect |
+| Env | Default | Effect (shipped W3) |
 |---|---|---|
-| `MAX_UPLOAD_BYTES` | 50 MB | middleware + counted copy → 413 |
-| `MAX_IMAGE_PIXELS` | 50 Mpx | `Image.MAX_IMAGE_PIXELS`; bomb → 413 |
-| `MAX_PDF_PAGES` | 200 | census reject → 422 |
-| `OP_TIMEOUT_S` | 30 | per-op (dict override per endpoint); gs subprocess same |
-| `DOC_TOOLKIT_ALLOWED_DIRS` | `~` | MCP `_resolve` + output confinement; `list_allowed_dirs` tool |
+| `MAX_UPLOAD_BYTES` | 50 MB | declared-size check + counted copy → 413 |
+| `MAX_IMAGE_PIXELS` | 50 Mpx | `Image.MAX_IMAGE_PIXELS`; bomb → InvalidInput → 422 |
+| `MAX_PDF_PAGES` | 200 | inspector+compressor reject → 422 |
+| `SUBPROCESS_TIMEOUT_S` | 120 | gs runs; timeout → UnreadableDocument. HTTP preemptive timeout deferred to pre-hosting process pool (threads can't cancel CPU work) |
+| `DOC_TOOLKIT_ALLOWED_DIRS` | `~` | MCP input+output confinement; `list_allowed_dirs`; no-clobber w/o `overwrite=True` |
+| `DOC_TOOLKIT_LOG` | WARNING | stderr logger level (`get_logger`) |
 
 ## Tests (all green = definition of done)
 

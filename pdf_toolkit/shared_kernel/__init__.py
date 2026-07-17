@@ -6,6 +6,9 @@ ubiquitous language; Rust and Go mirror them exactly. See ../../DOMAIN.md.
 
 from __future__ import annotations
 
+import logging
+import os
+import sys
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from enum import Enum
@@ -190,3 +193,44 @@ class LosslessOutcome:
     @property
     def saved_pct(self) -> float:
         return 100.0 * (1 - self.after_bytes / self.before_bytes) if self.before_bytes else 0.0
+
+
+# ── Typed errors (W3): one small taxonomy, mapped deliberately per surface ────
+# CLI → stderr message + exit 2 · HTTP → 4xx · MCP → isError. See docs/LLD.md §Errors.
+
+
+class InvalidInput(ValueError):
+    """The user can fix this: bad value, unsupported format, over a limit."""
+
+
+class UnreadableDocument(InvalidInput):
+    """File exists but cannot be processed: corrupt, encrypted, or wrong type."""
+
+
+# ── Resource limits (W3): reject-before-decode; defaults ON, env-overridable ──
+# Prior art: imgproxy MAX_SRC_RESOLUTION, gotenberg API_BODY_LIMIT (docs/RESEARCH.md §4).
+
+
+def _env_int(name: str, default: int) -> int:
+    try:
+        return int(os.environ.get(name, default))
+    except ValueError:
+        return default
+
+
+MAX_UPLOAD_BYTES = _env_int("MAX_UPLOAD_BYTES", 50_000_000)  # HTTP uploads → 413
+MAX_IMAGE_PIXELS = _env_int("MAX_IMAGE_PIXELS", 50_000_000)  # decompression bombs
+MAX_PDF_PAGES = _env_int("MAX_PDF_PAGES", 200)  # parse bombs → InvalidInput
+SUBPROCESS_TIMEOUT_S = _env_int("SUBPROCESS_TIMEOUT_S", 120)  # gs et al. must not hang
+
+
+def get_logger(name: str) -> logging.Logger:
+    """Project logger. Handlers write to STDERR only — stdout belongs to the MCP
+    stdio stream and CLI output. Level via DOC_TOOLKIT_LOG (default WARNING)."""
+    root = logging.getLogger("pdf_toolkit")
+    if not root.handlers:
+        handler = logging.StreamHandler(sys.stderr)
+        handler.setFormatter(logging.Formatter("%(asctime)s %(name)s %(levelname)s %(message)s"))
+        root.addHandler(handler)
+        root.setLevel(os.environ.get("DOC_TOOLKIT_LOG", "WARNING").upper())
+    return logging.getLogger(name if name.startswith("pdf_toolkit") else f"pdf_toolkit.{name}")

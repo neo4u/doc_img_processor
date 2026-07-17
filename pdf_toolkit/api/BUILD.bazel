@@ -33,3 +33,16 @@ py_test(
         "@pypi//pytest",
     ],
 )
+
+py_test(
+    name = "hardening_test",
+    srcs = ["hardening_test.py"],
+    deps = [
+        ":api",
+        "//pdf_toolkit:conftest",
+        "@pypi//fastapi",
+        "@pypi//httpx2",
+        "@pypi//pillow",
+        "@pypi//pytest",
+    ],
+)

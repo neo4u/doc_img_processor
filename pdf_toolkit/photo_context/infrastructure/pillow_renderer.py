@@ -9,15 +9,23 @@ import pillow_heif
 from PIL import Image, ImageDraw, ImageOps
 
 from pdf_toolkit.photo_context.ports import CropAnchor, GuideLine, PhotoRenderer, RgbColor
-from pdf_toolkit.shared_kernel import GUIDE_COLOR
+from pdf_toolkit.shared_kernel import GUIDE_COLOR, MAX_IMAGE_PIXELS, InvalidInput, UnreadableDocument
 
 pillow_heif.register_heif_opener()  # makes Image.open understand .heic/.heif
+# Reject-before-decode (W3): Pillow's default bomb threshold is too lax for a
+# served path; DecompressionBombError fires past 2x this cap (imgproxy pattern).
+Image.MAX_IMAGE_PIXELS = MAX_IMAGE_PIXELS
 
 
 class PillowPhotoRenderer(PhotoRenderer[Image.Image]):
     def load(self, path: Path) -> Image.Image:
-        img: Image.Image = Image.open(path)
-        img = ImageOps.exif_transpose(img)  # phone photos carry orientation in EXIF
+        try:
+            img: Image.Image = Image.open(path)
+            img = ImageOps.exif_transpose(img)  # phone photos carry orientation in EXIF
+        except Image.DecompressionBombError as e:
+            raise InvalidInput(f"image exceeds the {MAX_IMAGE_PIXELS:,}-pixel safety cap: {path.name}") from e
+        except (OSError, SyntaxError) as e:  # PIL's unreadable-file surface
+            raise UnreadableDocument(f"cannot read image {path.name}: {e}") from e
         if img.mode not in ("RGB", "RGBA"):
             img = img.convert("RGBA" if "A" in img.mode or "P" in img.mode else "RGB")
         return img

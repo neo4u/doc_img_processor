@@ -14,7 +14,14 @@ import pikepdf
 
 from pdf_toolkit.pdf_context.domain import Codec, DocumentCensus, EmbeddedImage
 from pdf_toolkit.pdf_context.ports import PdfInspector
-from pdf_toolkit.shared_kernel import EffectiveDpi, ImageKind, MediaFile
+from pdf_toolkit.shared_kernel import (
+    MAX_PDF_PAGES,
+    EffectiveDpi,
+    ImageKind,
+    InvalidInput,
+    MediaFile,
+    UnreadableDocument,
+)
 
 _CS_KIND = {
     "/DeviceGray": ImageKind.GRAYSCALE,
@@ -48,7 +55,15 @@ class PikepdfInspector(PdfInspector):
     def inspect(self, source: MediaFile) -> DocumentCensus:
         images: list[EmbeddedImage] = []
         image_bytes = 0
-        with pikepdf.open(source.path) as pdf:
+        try:
+            pdf_ctx = pikepdf.open(source.path)
+        except pikepdf.PasswordError as e:
+            raise UnreadableDocument(f"{source.path.name} is password-protected") from e
+        except pikepdf.PdfError as e:
+            raise UnreadableDocument(f"{source.path.name} is not a readable PDF: {e}") from e
+        with pdf_ctx as pdf:
+            if len(pdf.pages) > MAX_PDF_PAGES:
+                raise InvalidInput(f"{source.path.name} has {len(pdf.pages)} pages — cap is {MAX_PDF_PAGES}")
             for pno, page in enumerate(pdf.pages):
                 box = page.mediabox
                 page_w_in = (float(box[2]) - float(box[0])) / 72.0

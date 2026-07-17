@@ -14,7 +14,7 @@ from pathlib import Path
 
 from pdf_toolkit.pdf_context.domain import CompressionResult
 from pdf_toolkit.pdf_context.ports import Compressor
-from pdf_toolkit.shared_kernel import CompressionTarget, MediaFile
+from pdf_toolkit.shared_kernel import SUBPROCESS_TIMEOUT_S, CompressionTarget, MediaFile, UnreadableDocument
 
 
 class GhostscriptCompressor(Compressor):
@@ -25,25 +25,32 @@ class GhostscriptCompressor(Compressor):
         self._gs = gs_binary
 
     def _run(self, src: Path, dst: Path, dpi: int) -> int:
-        subprocess.run(
-            [
-                self._gs,
-                "-sDEVICE=pdfwrite",
-                "-dNOPAUSE",
-                "-dQUIET",
-                "-dBATCH",
-                "-dPDFSETTINGS=/default",
-                f"-dColorImageResolution={dpi}",
-                f"-dGrayImageResolution={dpi}",
-                f"-dMonoImageResolution={dpi}",
-                "-dDownsampleColorImages=true",
-                "-dDownsampleGrayImages=true",
-                f"-sOutputFile={dst}",
-                str(src),
-            ],
-            check=True,
-            capture_output=True,
-        )
+        cmd = [
+            self._gs,
+            "-sDEVICE=pdfwrite",
+            "-dNOPAUSE",
+            "-dQUIET",
+            "-dBATCH",
+            "-dPDFSETTINGS=/default",
+            f"-dColorImageResolution={dpi}",
+            f"-dGrayImageResolution={dpi}",
+            f"-dMonoImageResolution={dpi}",
+            "-dDownsampleColorImages=true",
+            "-dDownsampleGrayImages=true",
+            f"-sOutputFile={dst}",
+            str(src),
+        ]
+        try:
+            # Timeout (W3): gs can hang forever on pathological input; stderr is
+            # surfaced on failure so CalledProcessError is actionable.
+            subprocess.run(cmd, check=True, capture_output=True, timeout=SUBPROCESS_TIMEOUT_S)
+        except subprocess.TimeoutExpired as e:
+            raise UnreadableDocument(
+                f"ghostscript timed out after {SUBPROCESS_TIMEOUT_S}s on {src.name}"
+            ) from e
+        except subprocess.CalledProcessError as e:
+            tail = (e.stderr or b"").decode(errors="replace").strip()[-500:]
+            raise UnreadableDocument(f"ghostscript failed on {src.name}: {tail}") from e
         return dst.stat().st_size
 
     def compress(self, source: MediaFile, target: CompressionTarget, out: Path) -> CompressionResult:
