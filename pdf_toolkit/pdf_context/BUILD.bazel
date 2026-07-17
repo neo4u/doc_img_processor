@@ -37,3 +37,26 @@ py_test(
         "@pypi//pytest",
     ],
 )
+
+py_test(
+    name = "compressor_test",
+    srcs = ["compressor_test.py"],
+    deps = [
+        ":pdf_context",
+        "//pdf_toolkit:conftest",
+        "//pdf_toolkit/pdf_context/infrastructure",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//pytest",
+    ],
+)
+
+py_test(
+    name = "services_test",
+    srcs = ["services_test.py"],
+    deps = [
+        ":pdf_context",
+        "//pdf_toolkit:conftest",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//pytest",
+    ],
+)

@@ -375,8 +375,8 @@
     "semantic_hash": "8087c7b1c62a018644d0dfa8f160257f"
   },
   "tools/pre-commit.sh": {
-    "mtime": 1784146309.5358746,
-    "ast_hash": "1208b02d2a004fca2d5e1dc7cbffdfda",
+    "mtime": 1784263073.440941,
+    "ast_hash": "1fc588b018f109bf3e3c4e6c30b16a81",
     "semantic_hash": ""
   },
   "tools/venv.sh": {
@@ -415,14 +415,14 @@
     "semantic_hash": "3a8fd6c1d5521a54475b8c76bd7bce46"
   },
   "dependencies/python/requirements-darwin-aarch64.txt": {
-    "mtime": 1784102947.3277369,
-    "ast_hash": "3717a013ee4235af3646b2188d6bcf84",
-    "semantic_hash": "3717a013ee4235af3646b2188d6bcf84"
+    "mtime": 1784263075.2552943,
+    "ast_hash": "e6520162f13963430bc54238eb76793f",
+    "semantic_hash": ""
   },
   "dependencies/python/requirements-linux-x86_64.txt": {
-    "mtime": 1784102947.3476887,
-    "ast_hash": "f1ca3179ebb75b1487516c1d085ce263",
-    "semantic_hash": "f1ca3179ebb75b1487516c1d085ce263"
+    "mtime": 1784263075.7323375,
+    "ast_hash": "63a3dce140b7f6d20f6433cf522ca2bb",
+    "semantic_hash": ""
   },
   "docs/ANALYSIS.md": {
     "mtime": 1784096585.8011844,
@@ -450,8 +450,8 @@
     "semantic_hash": "d0824ad80d963bbbac0c1dc91a8cfa10"
   },
   "docs/PLAN.md": {
-    "mtime": 1784262863.6450868,
-    "ast_hash": "129f421b13eca42cb942a51eb1c19dcc",
+    "mtime": 1784263208.963708,
+    "ast_hash": "128abc3784c307ae4018f2b985824c77",
     "semantic_hash": ""
   },
   "docs/PRD.md": {
@@ -470,9 +470,9 @@
     "semantic_hash": "fd500c84339b5b500920ce918e1ab84e"
   },
   "gazelle_python.yaml": {
-    "mtime": 1784102949.6848743,
-    "ast_hash": "3fab2a86488ec67d14c157c396190394",
-    "semantic_hash": "3fab2a86488ec67d14c157c396190394"
+    "mtime": 1784263095.5204177,
+    "ast_hash": "90d7899c317107da18197ad9dec79de8",
+    "semantic_hash": ""
   },
   "skills/doc-toolkit-router/SKILL.md": {
     "mtime": 1784143651.7944365,
@@ -497,6 +497,31 @@
   "pdf_toolkit/pdf_context/ghostscript_test.py": {
     "mtime": 1784262718.3008406,
     "ast_hash": "7d3e832047019baf428e0c0ad494b348",
+    "semantic_hash": ""
+  },
+  "pdf_toolkit/cli/main_test.py": {
+    "mtime": 1784262926.2427003,
+    "ast_hash": "62c219f1df2e4847b28c4dc016256f5a",
+    "semantic_hash": ""
+  },
+  "pdf_toolkit/image_context/ssim_meter_test.py": {
+    "mtime": 1784262933.6479237,
+    "ast_hash": "d1a48185e34fa14c4887853ec1766502",
+    "semantic_hash": ""
+  },
+  "pdf_toolkit/pdf_context/compressor_test.py": {
+    "mtime": 1784262916.7405012,
+    "ast_hash": "89e2c12c249e7e1c0a3ab7156ebe200a",
+    "semantic_hash": ""
+  },
+  "pdf_toolkit/pdf_context/services_test.py": {
+    "mtime": 1784262902.9086967,
+    "ast_hash": "ec67130fb72f83c9b0b67c746e03d2ba",
+    "semantic_hash": ""
+  },
+  "pdf_toolkit/perf_test.py": {
+    "mtime": 1784263176.9036682,
+    "ast_hash": "cf837f937b7ddd7f2d10ee576c483f8c",
     "semantic_hash": ""
   }
 }

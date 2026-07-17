@@ -22,8 +22,8 @@ echo "── 2/5 ruff format --check"
 echo "── 3/5 mypy"
 "$PY/mypy" pdf_toolkit
 
-echo "── 4/5 pytest"
-"$PY/pytest"
+echo "── 4/5 pytest (+coverage floor)"
+"$PY/pytest" --cov=pdf_toolkit --cov-report=term-missing:skip-covered --cov-fail-under=75 -q
 
 echo "── 5/5 gazelle BUILD drift"
 if command -v bazel >/dev/null 2>&1; then

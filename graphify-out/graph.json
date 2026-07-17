@@ -1487,6 +1487,86 @@
       "_origin": "ast"
     },
     {
+      "id": "pdf_toolkit_cli_main_test",
+      "label": "main_test.py",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_cli_main_test_run",
+      "label": "_run()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L10",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_cli_main_test_test_photo_writes_spec_output_and_sheet",
+      "label": "test_photo_writes_spec_output_and_sheet()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L15",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_cli_main_test_test_photo_sheet_none_skips_sheet",
+      "label": "test_photo_sheet_none_skips_sheet()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_cli_main_test_test_sheet_landscape",
+      "label": "test_sheet_landscape()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L29",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_cli_main_test_test_lossless_jpg",
+      "label": "test_lossless_jpg()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_cli_main_test_test_merge",
+      "label": "test_merge()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L41",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_cli_main_test_test_missing_file_exits_2_with_message",
+      "label": "test_missing_file_exits_2_with_message()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L47",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_cli_main_test_test_unknown_spec_rejected_by_argparse",
+      "label": "test_unknown_spec_rejected_by_argparse()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_cli_main_test_rationale_1",
+      "label": "CLI e2e: argv → main() per subcommand, exit-code contract (W4).",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
       "id": "pdf_toolkit_conftest",
       "label": "conftest.py",
       "file_type": "code",
@@ -1887,7 +1967,7 @@
       "_origin": "ast"
     },
     {
-      "id": "ndarray",
+      "id": "pdf_toolkit_image_context_infrastructure_ssim_meter_py_ndarray",
       "label": "ndarray",
       "file_type": "code",
       "source_file": "",
@@ -2284,6 +2364,70 @@
       "file_type": "rationale",
       "source_file": "pdf_toolkit/image_context/recompress_test.py",
       "source_location": "L36",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_image_context_ssim_meter_test",
+      "label": "ssim_meter_test.py",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_image_context_ssim_meter_test_png",
+      "label": "_png()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L14",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_image_context_ssim_meter_test_py_ndarray",
+      "label": "ndarray",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_image_context_ssim_meter_test_meter",
+      "label": "meter()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L21",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_image_context_ssim_meter_test_test_identical_images_score_1",
+      "label": "test_identical_images_score_1()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L25",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_image_context_ssim_meter_test_test_heavy_degradation_scores_lower_than_light",
+      "label": "test_heavy_degradation_scores_lower_than_light()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_image_context_ssim_meter_test_test_scores_are_ssim_metric",
+      "label": "test_scores_are_ssim_metric()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L41",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_image_context_ssim_meter_test_rationale_1",
+      "label": "NumpySsimMeter sanity: the floor's measuring stick must itself measure (W4).",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L1",
       "_origin": "ast"
     },
     {
@@ -2812,6 +2956,174 @@
       "file_type": "rationale",
       "source_file": "pdf_toolkit/pdf_context/application.py",
       "source_location": "L61",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test",
+      "label": "compressor_test.py",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_stubescalation",
+      "label": "StubEscalation",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L22",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_py_compressor",
+      "label": "Compressor",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_stubescalation_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L27",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "label": ".compress()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L30",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_py_mediafile",
+      "label": "MediaFile",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_py_compressiontarget",
+      "label": "CompressionTarget",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_py_path",
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_py_compressionresult",
+      "label": "CompressionResult",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_target",
+      "label": "_target()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L46",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_test_under_ceiling_short_circuits_but_validates",
+      "label": "test_under_ceiling_short_circuits_but_validates()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L50",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_test_passthrough_rejects_garbage",
+      "label": "test_passthrough_rejects_garbage()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L58",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_test_compress_shrinks_and_never_enlarges",
+      "label": "test_compress_shrinks_and_never_enlarges()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L65",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_test_budget_miss_escalates_to_fallback",
+      "label": "test_budget_miss_escalates_to_fallback()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L73",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_test_no_escalation_engine_reports_honestly",
+      "label": "test_no_escalation_engine_reports_honestly()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L83",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_rationale_1",
+      "label": "PikepdfCompressor orchestration: short-circuit, hard rule #1, escalation (W4).",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_rationale_23",
+      "label": "Records whether escalation fired; writes a tiny valid output.",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L23",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_rationale_51",
+      "label": "Already under target → byte-identical copy, no image surgery.",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L51",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_rationale_66",
+      "label": "Real path: tight-but-reachable budget → smaller output (hard rule #1 bound).",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L66",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_rationale_74",
+      "label": "Impossible budget (1 KB) → BudgetMissed → escalation engine fires.",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L74",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_compressor_test_rationale_84",
+      "label": "Impossible budget, no fallback → result over ceiling, escalated=False (no lying)",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L84",
       "_origin": "ast"
     },
     {
@@ -3804,6 +4116,230 @@
       "file_type": "rationale",
       "source_file": "pdf_toolkit/pdf_context/services.py",
       "source_location": "L13",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test",
+      "label": "services_test.py",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_img",
+      "label": "_img()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L20",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_py_embeddedimage",
+      "label": "EmbeddedImage",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_census",
+      "label": "_census()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_py_documentcensus",
+      "label": "DocumentCensus",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition",
+      "label": "TestBudgetDecomposition",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L39",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_allocation_proportional_to_rendered_area",
+      "label": ".test_allocation_proportional_to_rendered_area()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L40",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_every_image_gets_at_least_one_byte",
+      "label": ".test_every_image_gets_at_least_one_byte()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L46",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_empty_census_yields_empty_allocation",
+      "label": ".test_empty_census_yields_empty_allocation()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L51",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "label": "TestTargetSizeSearch",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L55",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_encode",
+      "label": "._encode()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L59",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_py_perceptualscore",
+      "label": "PerceptualScore",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_finds_largest_quality_that_fits",
+      "label": ".test_finds_largest_quality_that_fits()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L62",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_floor_rejection_returns_none",
+      "label": ".test_floor_rejection_returns_none()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L68",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_probe_count_is_logarithmic",
+      "label": ".test_probe_count_is_logarithmic()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L73",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_test_bitonal_resamples_nearest_hard_rule_2",
+      "label": "test_bitonal_resamples_nearest_hard_rule_2()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L84",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_rationale_1",
+      "label": "Pure domain services: BudgetDecomposition + TargetSizeSearch (W4, LLD §Tests).",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_rationale_56",
+      "label": "encode(q) = (q*100 bytes, score q/100) — perfectly monotonic fake encoder.",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L56",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_pdf_context_services_test_rationale_85",
+      "label": "Hard rule #2 (named test): bitonal must not be interpolated into gray.",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L85",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_perf_test",
+      "label": "perf_test.py",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_perf_test_test_photo_under_one_second",
+      "label": "test_photo_under_one_second()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_perf_test_test_sheet_under_one_second",
+      "label": "test_sheet_under_one_second()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L34",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_perf_test_test_compress_3page_scan_under_10s",
+      "label": "test_compress_3page_scan_under_10s()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L44",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_perf_test_test_stress_50_page_scan",
+      "label": "test_stress_50_page_scan()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L58",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_perf_test_test_stress_concurrent_api_photos",
+      "label": "test_stress_concurrent_api_photos()",
+      "file_type": "code",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L72",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_perf_test_rationale_1",
+      "label": "Performance budgets (`-m perf`) and stress (`-m manual`) — excluded from default",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_perf_test_rationale_59",
+      "label": "Near the MAX_PDF_PAGES envelope; must finish, not corrupt, not OOM.",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L59",
+      "_origin": "ast"
+    },
+    {
+      "id": "pdf_toolkit_perf_test_rationale_73",
+      "label": "Threadpool sanity: 8 concurrent /photo round-trips, all 200.",
+      "file_type": "rationale",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L73",
       "_origin": "ast"
     },
     {
@@ -5951,7 +6487,7 @@
       "_origin": "ast"
     },
     {
-      "id": "embeddedimage",
+      "id": "rust_src_pdf_context_services_rs_embeddedimage",
       "label": "EmbeddedImage",
       "file_type": "code",
       "source_file": "",
@@ -7239,8 +7775,8 @@
       "_origin": "ast"
     },
     {
-      "id": "docs_plan_wave_4_testing_completion_m_review_axis_5_7",
-      "label": "Wave 4 — Testing completion (M) 🔄 (REVIEW axis 5–7)",
+      "id": "docs_plan_wave_4_testing_completion_m_2026_07_16_two_carry_overs",
+      "label": "Wave 4 — Testing completion (M) ✅ 2026-07-16 (two carry-overs)",
       "file_type": "document",
       "source_file": "docs/PLAN.md",
       "source_location": "L50",
@@ -7251,7 +7787,7 @@
       "label": "Wave 5 — Domain truth & census correctness (L) ⬜ (RESEARCH §1)",
       "file_type": "document",
       "source_file": "docs/PLAN.md",
-      "source_location": "L58",
+      "source_location": "L59",
       "_origin": "ast"
     },
     {
@@ -7259,7 +7795,7 @@
       "label": "Wave 6 — Metrics & encoder frontier (M/L) ⬜ (RESEARCH §3)",
       "file_type": "document",
       "source_file": "docs/PLAN.md",
-      "source_location": "L67",
+      "source_location": "L68",
       "_origin": "ast"
     },
     {
@@ -7267,7 +7803,7 @@
       "label": "Wave 7 — Photo intelligence (Phase 8 concretized) ⬜ (RESEARCH §2)",
       "file_type": "document",
       "source_file": "docs/PLAN.md",
-      "source_location": "L74",
+      "source_location": "L75",
       "_origin": "ast"
     },
     {
@@ -7275,7 +7811,7 @@
       "label": "Later (unchanged)",
       "file_type": "document",
       "source_file": "docs/PLAN.md",
-      "source_location": "L82",
+      "source_location": "L83",
       "_origin": "ast"
     },
     {
@@ -7283,7 +7819,7 @@
       "label": "Wave 8 — use-case candidates (PRD triage before any code)",
       "file_type": "document",
       "source_file": "docs/PLAN.md",
-      "source_location": "L89",
+      "source_location": "L90",
       "_origin": "ast"
     },
     {
@@ -11382,6 +11918,187 @@
       "weight": 1.0
     },
     {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main_test_run",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main_test_test_photo_writes_spec_output_and_sheet",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main_test_test_photo_sheet_none_skips_sheet",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main_test_test_sheet_landscape",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main_test_test_lossless_jpg",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main_test_test_merge",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main_test_test_missing_file_exits_2_with_message",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main_test_test_unknown_spec_rejected_by_argparse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test_test_photo_writes_spec_output_and_sheet",
+      "target": "pdf_toolkit_cli_main_test_run",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test_test_photo_sheet_none_skips_sheet",
+      "target": "pdf_toolkit_cli_main_test_run",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test_test_sheet_landscape",
+      "target": "pdf_toolkit_cli_main_test_run",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test_test_lossless_jpg",
+      "target": "pdf_toolkit_cli_main_test_run",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test_test_merge",
+      "target": "pdf_toolkit_cli_main_test_run",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test_test_missing_file_exits_2_with_message",
+      "target": "pdf_toolkit_cli_main_test_run",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test_test_unknown_spec_rejected_by_argparse",
+      "target": "pdf_toolkit_cli_main_test_run",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_cli_main_test_rationale_1",
+      "target": "pdf_toolkit_cli_main_test",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "pdf_toolkit_conftest",
       "target": "io",
       "relation": "imports",
@@ -12200,7 +12917,7 @@
     },
     {
       "source": "pdf_toolkit_image_context_infrastructure_ssim_meter_luma",
-      "target": "ndarray",
+      "target": "pdf_toolkit_image_context_infrastructure_ssim_meter_py_ndarray",
       "relation": "references",
       "context": "return_type",
       "confidence": "EXTRACTED",
@@ -12219,7 +12936,7 @@
     },
     {
       "source": "pdf_toolkit_image_context_infrastructure_ssim_meter_box",
-      "target": "ndarray",
+      "target": "pdf_toolkit_image_context_infrastructure_ssim_meter_py_ndarray",
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
@@ -12973,6 +13690,180 @@
       "confidence": "EXTRACTED",
       "source_file": "pdf_toolkit/image_context/recompress_test.py",
       "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "io",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "numpy",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pil",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pdf_toolkit_image_context_infrastructure_ssim_meter",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pdf_toolkit_image_context_ssim_meter_test_png",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test_png",
+      "target": "pdf_toolkit_image_context_ssim_meter_test_py_ndarray",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pdf_toolkit_image_context_ssim_meter_test_meter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test_meter",
+      "target": "pdf_toolkit_image_context_infrastructure_ssim_meter_numpyssimmeter",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pdf_toolkit_image_context_ssim_meter_test_test_identical_images_score_1",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pdf_toolkit_image_context_ssim_meter_test_test_heavy_degradation_scores_lower_than_light",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pdf_toolkit_image_context_ssim_meter_test_test_scores_are_ssim_metric",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test_meter",
+      "target": "pdf_toolkit_image_context_infrastructure_ssim_meter_numpyssimmeter",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test_test_identical_images_score_1",
+      "target": "pdf_toolkit_image_context_ssim_meter_test_png",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test_test_heavy_degradation_scores_lower_than_light",
+      "target": "pdf_toolkit_image_context_ssim_meter_test_png",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test_test_scores_are_ssim_metric",
+      "target": "pdf_toolkit_image_context_ssim_meter_test_png",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test_rationale_1",
+      "target": "pdf_toolkit_image_context_ssim_meter_test",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -14169,6 +15060,400 @@
       "confidence": "EXTRACTED",
       "source_file": "pdf_toolkit/pdf_context/application.py",
       "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_domain",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_ports",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_shared_kernel",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation",
+      "target": "pdf_toolkit_pdf_context_compressor_test_py_compressor",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "target": "pdf_toolkit_pdf_context_compressor_test_py_mediafile",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "target": "pdf_toolkit_pdf_context_compressor_test_py_compressiontarget",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "target": "pdf_toolkit_pdf_context_compressor_test_py_path",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "target": "pdf_toolkit_pdf_context_compressor_test_py_compressionresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_compressor_test_target",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_target",
+      "target": "pdf_toolkit_pdf_context_compressor_test_py_compressiontarget",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_compressor_test_test_under_ceiling_short_circuits_but_validates",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_compressor_test_test_passthrough_rejects_garbage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_compressor_test_test_compress_shrinks_and_never_enlarges",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_compressor_test_test_budget_miss_escalates_to_fallback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_compressor_test_test_no_escalation_engine_reports_honestly",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "target": "pdf_toolkit_pdf_context_compressor_test_py_compressionresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_target",
+      "target": "pdf_toolkit_pdf_context_compressor_test_py_compressiontarget",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_under_ceiling_short_circuits_but_validates",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_under_ceiling_short_circuits_but_validates",
+      "target": "pdf_toolkit_pdf_context_compressor_test_target",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_passthrough_rejects_garbage",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_passthrough_rejects_garbage",
+      "target": "pdf_toolkit_pdf_context_compressor_test_target",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_compress_shrinks_and_never_enlarges",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_compress_shrinks_and_never_enlarges",
+      "target": "pdf_toolkit_pdf_context_compressor_test_target",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_budget_miss_escalates_to_fallback",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_budget_miss_escalates_to_fallback",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_budget_miss_escalates_to_fallback",
+      "target": "pdf_toolkit_pdf_context_compressor_test_target",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_no_escalation_engine_reports_honestly",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation_compress",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_no_escalation_engine_reports_honestly",
+      "target": "pdf_toolkit_pdf_context_compressor_test_target",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_rationale_1",
+      "target": "pdf_toolkit_pdf_context_compressor_test",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_rationale_23",
+      "target": "pdf_toolkit_pdf_context_compressor_test_stubescalation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_rationale_51",
+      "target": "pdf_toolkit_pdf_context_compressor_test_test_under_ceiling_short_circuits_but_validates",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_rationale_66",
+      "target": "pdf_toolkit_pdf_context_compressor_test_test_compress_shrinks_and_never_enlarges",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_rationale_74",
+      "target": "pdf_toolkit_pdf_context_compressor_test_test_budget_miss_escalates_to_fallback",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_rationale_84",
+      "target": "pdf_toolkit_pdf_context_compressor_test_test_no_escalation_engine_reports_honestly",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -16264,6 +17549,463 @@
       "confidence": "EXTRACTED",
       "source_file": "pdf_toolkit/pdf_context/services.py",
       "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_domain",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_services",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_shared_kernel",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_services_test_img",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_img",
+      "target": "pdf_toolkit_pdf_context_services_test_py_embeddedimage",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_services_test_census",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_census",
+      "target": "pdf_toolkit_pdf_context_services_test_py_documentcensus",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition",
+      "target": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_allocation_proportional_to_rendered_area",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition",
+      "target": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_every_image_gets_at_least_one_byte",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition",
+      "target": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_empty_census_yields_empty_allocation",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "target": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_encode",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_encode",
+      "target": "pdf_toolkit_pdf_context_services_test_py_perceptualscore",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "target": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_finds_largest_quality_that_fits",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "target": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_floor_rejection_returns_none",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "target": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_probe_count_is_logarithmic",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_services_test_test_bitonal_resamples_nearest_hard_rule_2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_img",
+      "target": "pdf_toolkit_pdf_context_services_test_py_embeddedimage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_census",
+      "target": "pdf_toolkit_pdf_context_services_test_py_documentcensus",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_allocation_proportional_to_rendered_area",
+      "target": "pdf_toolkit_pdf_context_services_test_census",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_allocation_proportional_to_rendered_area",
+      "target": "pdf_toolkit_pdf_context_services_test_img",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_every_image_gets_at_least_one_byte",
+      "target": "pdf_toolkit_pdf_context_services_test_census",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_every_image_gets_at_least_one_byte",
+      "target": "pdf_toolkit_pdf_context_services_test_img",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_empty_census_yields_empty_allocation",
+      "target": "pdf_toolkit_pdf_context_services_test_census",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_encode",
+      "target": "pdf_toolkit_pdf_context_services_test_py_perceptualscore",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_test_bitonal_resamples_nearest_hard_rule_2",
+      "target": "pdf_toolkit_pdf_context_services_test_img",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_test_bitonal_resamples_nearest_hard_rule_2",
+      "target": "pdf_toolkit_pdf_context_services_test_py_embeddedimage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_rationale_1",
+      "target": "pdf_toolkit_pdf_context_services_test",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_rationale_56",
+      "target": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_rationale_85",
+      "target": "pdf_toolkit_pdf_context_services_test_test_bitonal_resamples_nearest_hard_rule_2",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "time",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "numpy",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pil",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_photo_context",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_photo_context_infrastructure_pillow_renderer",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_perf_test_test_photo_under_one_second",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_perf_test_test_sheet_under_one_second",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_perf_test_test_compress_3page_scan_under_10s",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_perf_test_test_stress_50_page_scan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_perf_test_test_stress_concurrent_api_photos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_rationale_1",
+      "target": "pdf_toolkit_perf_test",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_rationale_59",
+      "target": "pdf_toolkit_perf_test_test_stress_50_page_scan",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_rationale_73",
+      "target": "pdf_toolkit_perf_test_test_stress_concurrent_api_photos",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -20350,7 +22092,7 @@
     },
     {
       "source": "rust_src_pdf_context_services_img",
-      "target": "embeddedimage",
+      "target": "rust_src_pdf_context_services_rs_embeddedimage",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "rust/src/pdf_context/services.rs",
@@ -21841,7 +23583,7 @@
     },
     {
       "source": "docs_plan_improvement_program_waves_review_themes_research_adoptions",
-      "target": "docs_plan_wave_4_testing_completion_m_review_axis_5_7",
+      "target": "docs_plan_wave_4_testing_completion_m_2026_07_16_two_carry_overs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PLAN.md",
@@ -21854,7 +23596,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PLAN.md",
-      "source_location": "L58",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -21863,7 +23605,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PLAN.md",
-      "source_location": "L67",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -21872,7 +23614,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PLAN.md",
-      "source_location": "L74",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -21881,7 +23623,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PLAN.md",
-      "source_location": "L82",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -21890,7 +23632,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/PLAN.md",
-      "source_location": "L89",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -22644,6 +24386,16 @@
       "weight": 1.0
     },
     {
+      "source": "pdf_toolkit_cli_main_test",
+      "target": "pdf_toolkit_cli_main_main",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "pdf_toolkit_image_context_init",
       "target": "pdf_toolkit_image_context_application_recompressoutcome",
       "relation": "imports",
@@ -23024,6 +24776,26 @@
       "weight": 1.0
     },
     {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pdf_toolkit_image_context_infrastructure_ssim_meter_numpyssimmeter",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_image_context_ssim_meter_test",
+      "target": "pdf_toolkit_shared_kernel_init_metric",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/image_context/ssim_meter_test.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
       "source": "pdf_toolkit_mcp_server_server",
       "target": "pdf_toolkit_photo_context_ports_centerfacelocator",
       "relation": "imports",
@@ -23381,6 +25153,96 @@
       "confidence": "EXTRACTED",
       "source_file": "pdf_toolkit/pdf_context/application.py",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_domain_compressionresult",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor_pikepdfcompressor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_pdf_context_ports_compressor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_shared_kernel_init_bytebudget",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_shared_kernel_init_compressiontarget",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_shared_kernel_init_mediafile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_shared_kernel_init_metric",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_shared_kernel_init_qualityfloor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test",
+      "target": "pdf_toolkit_shared_kernel_init_unreadabledocument",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -24104,6 +25966,246 @@
       "weight": 1.0
     },
     {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_domain_codec",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_domain_documentcensus",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_domain_embeddedimage",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_pdf_context_services_budgetdecomposition",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_shared_kernel_init_effectivedpi",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_shared_kernel_init_imagekind",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_shared_kernel_init_mediafile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_shared_kernel_init_metric",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_shared_kernel_init_perceptualscore",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_shared_kernel_init_qualityfloor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_shared_kernel_init_targetsizesearch",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test",
+      "target": "pdf_toolkit_shared_kernel_init_resamplefilter",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_photo_context_ports_centerfacelocator",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_photo_context_application_composeprintsheet",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_photo_context_application_createpassportphoto",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_photo_context_infrastructure_pillow_renderer_pillowphotorenderer",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor_pikepdfcompressor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_shared_kernel_init_bytebudget",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_shared_kernel_init_compressiontarget",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_shared_kernel_init_mediafile",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_shared_kernel_init_metric",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_shared_kernel_init_qualityfloor",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_pdf_context_application_inspectdocument",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_inspector_pikepdfinspector",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
       "source": "pdf_toolkit_photo_context_init",
       "target": "pdf_toolkit_photo_context_application_composeprintsheet",
       "relation": "imports",
@@ -24734,6 +26836,16 @@
       "weight": 1.0
     },
     {
+      "source": "pdf_toolkit_cli_main_test_run",
+      "target": "pdf_toolkit_cli_main_main",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/cli/main_test.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
       "source": "pdf_toolkit_image_context_application_recompress_to_slice",
       "target": "pdf_toolkit_shared_kernel_init_targetsizesearch",
       "relation": "calls",
@@ -24801,6 +26913,126 @@
       "confidence": "EXTRACTED",
       "source_file": "pdf_toolkit/mcp_server/server.py",
       "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_target",
+      "target": "pdf_toolkit_shared_kernel_init_compressiontarget",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_target",
+      "target": "pdf_toolkit_shared_kernel_init_qualityfloor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_under_ceiling_short_circuits_but_validates",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor_pikepdfcompressor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_passthrough_rejects_garbage",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor_pikepdfcompressor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_compress_shrinks_and_never_enlarges",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor_pikepdfcompressor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_budget_miss_escalates_to_fallback",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor_pikepdfcompressor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_no_escalation_engine_reports_honestly",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor_pikepdfcompressor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_img",
+      "target": "pdf_toolkit_pdf_context_domain_embeddedimage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_img",
+      "target": "pdf_toolkit_shared_kernel_init_effectivedpi",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_census",
+      "target": "pdf_toolkit_pdf_context_domain_documentcensus",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_test_bitonal_resamples_nearest_hard_rule_2",
+      "target": "pdf_toolkit_pdf_context_domain_embeddedimage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_test_bitonal_resamples_nearest_hard_rule_2",
+      "target": "pdf_toolkit_shared_kernel_init_effectivedpi",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -25068,6 +27300,24 @@
       "weight": 0.8
     },
     {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation",
+      "target": "pdf_toolkit_pdf_context_domain_compressionresult",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L9",
+      "weight": 0.8
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_compressor_test_stubescalation",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor_pikepdfcompressor",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L10",
+      "weight": 0.8
+    },
+    {
       "source": "pdf_toolkit_pdf_context_infrastructure_agpl_native_compressor_nativeimagecompressor",
       "target": "pdf_toolkit_image_context_infrastructure_pillow_codec_pillowimagecodec",
       "relation": "uses",
@@ -25317,6 +27567,78 @@
       "confidence": "INFERRED",
       "source_file": "pdf_toolkit/pdf_context/services.py",
       "source_location": "L9",
+      "weight": 0.8
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition",
+      "target": "pdf_toolkit_pdf_context_domain_codec",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 0.8
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "target": "pdf_toolkit_pdf_context_domain_codec",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 0.8
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition",
+      "target": "pdf_toolkit_pdf_context_domain_documentcensus",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 0.8
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "target": "pdf_toolkit_pdf_context_domain_documentcensus",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 0.8
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition",
+      "target": "pdf_toolkit_pdf_context_domain_embeddedimage",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 0.8
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "target": "pdf_toolkit_pdf_context_domain_embeddedimage",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L7",
+      "weight": 0.8
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition",
+      "target": "pdf_toolkit_pdf_context_services_budgetdecomposition",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L8",
+      "weight": 0.8
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch",
+      "target": "pdf_toolkit_pdf_context_services_budgetdecomposition",
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L8",
       "weight": 0.8
     },
     {
@@ -25793,6 +28115,17 @@
       "weight": 1.0
     },
     {
+      "source": "pdf_toolkit_pdf_context_compressor_test_test_passthrough_rejects_garbage",
+      "target": "pdf_toolkit_shared_kernel_init_unreadabledocument",
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "pdf_toolkit/pdf_context/compressor_test.py",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
       "source": "pdf_toolkit_pdf_context_ghostscript_test_test_timeout_becomes_typed_error",
       "target": "pdf_toolkit_shared_kernel_init_unreadabledocument",
       "relation": "indirect_call",
@@ -26057,6 +28390,204 @@
       "weight": 1.0
     },
     {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_finds_largest_quality_that_fits",
+      "target": "pdf_toolkit_shared_kernel_init_targetsizesearch",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_finds_largest_quality_that_fits",
+      "target": "pdf_toolkit_shared_kernel_init_qualityfloor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_floor_rejection_returns_none",
+      "target": "pdf_toolkit_shared_kernel_init_targetsizesearch",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_floor_rejection_returns_none",
+      "target": "pdf_toolkit_shared_kernel_init_qualityfloor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_probe_count_is_logarithmic",
+      "target": "pdf_toolkit_shared_kernel_init_targetsizesearch",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testtargetsizesearch_test_probe_count_is_logarithmic",
+      "target": "pdf_toolkit_shared_kernel_init_qualityfloor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_photo_under_one_second",
+      "target": "pdf_toolkit_photo_context_infrastructure_pillow_renderer_pillowphotorenderer",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_photo_under_one_second",
+      "target": "pdf_toolkit_photo_context_application_createpassportphoto",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_photo_under_one_second",
+      "target": "pdf_toolkit_photo_context_ports_centerfacelocator",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_sheet_under_one_second",
+      "target": "pdf_toolkit_photo_context_infrastructure_pillow_renderer_pillowphotorenderer",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_sheet_under_one_second",
+      "target": "pdf_toolkit_photo_context_application_createpassportphoto",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_sheet_under_one_second",
+      "target": "pdf_toolkit_photo_context_ports_centerfacelocator",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_sheet_under_one_second",
+      "target": "pdf_toolkit_photo_context_application_composeprintsheet",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_compress_3page_scan_under_10s",
+      "target": "pdf_toolkit_shared_kernel_init_compressiontarget",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_compress_3page_scan_under_10s",
+      "target": "pdf_toolkit_shared_kernel_init_qualityfloor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_compress_3page_scan_under_10s",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_compressor_pikepdfcompressor",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_stress_50_page_scan",
+      "target": "pdf_toolkit_pdf_context_application_inspectdocument",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_perf_test_test_stress_50_page_scan",
+      "target": "pdf_toolkit_pdf_context_infrastructure_pikepdf_inspector_pikepdfinspector",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/perf_test.py",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
       "source": "pdf_toolkit_photo_context_application_createpassportphoto_encode_under_ceiling",
       "target": "pdf_toolkit_shared_kernel_init_targetsizesearch",
       "relation": "calls",
@@ -26175,6 +28706,39 @@
       "confidence_score": 1.0,
       "source_file": "pdf_toolkit/pdf_context/infrastructure/pikepdf_compressor.py",
       "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_allocation_proportional_to_rendered_area",
+      "target": "pdf_toolkit_pdf_context_services_budgetdecomposition_allocate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_every_image_gets_at_least_one_byte",
+      "target": "pdf_toolkit_pdf_context_services_budgetdecomposition_allocate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "pdf_toolkit_pdf_context_services_test_testbudgetdecomposition_test_empty_census_yields_empty_allocation",
+      "target": "pdf_toolkit_pdf_context_services_budgetdecomposition_allocate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "pdf_toolkit/pdf_context/services_test.py",
+      "source_location": "L52",
       "weight": 1.0
     },
     {

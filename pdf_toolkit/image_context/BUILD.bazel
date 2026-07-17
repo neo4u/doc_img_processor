@@ -34,3 +34,16 @@ py_test(
         "@pypi//pytest",
     ],
 )
+
+py_test(
+    name = "ssim_meter_test",
+    srcs = ["ssim_meter_test.py"],
+    deps = [
+        "//pdf_toolkit:conftest",
+        "//pdf_toolkit/image_context/infrastructure",
+        "//pdf_toolkit/shared_kernel",
+        "@pypi//numpy",
+        "@pypi//pillow",
+        "@pypi//pytest",
+    ],
+)

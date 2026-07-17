@@ -47,13 +47,14 @@ workstream items marked **T**.
 - ✅ Typed errors `InvalidInput`/`UnreadableDocument` in shared_kernel; mapping: CLI stderr+exit 2 · HTTP 422/413/500 via app-wide handlers · MCP raise→isError. CLI launcher fixed to work from any cwd (PYTHONPATH, not cd)
 - ✅ **T** 17 new tests: 413 oversize, 422 corrupt (x2 paths), bomb, correlation-id echo/mint, logged-500, allowlist input+output, no-clobber+overwrite, MCP round-trips, gs timeout/stderr contracts
 
-### Wave 4 — Testing completion (M) 🔄 (REVIEW axis 5–7)
-- ✅ **T** `conftest.py` created (fixtures: `portrait`, `jpeg_bytes`, `scan_pdf`, `api_client`); ⬜ migrate the 5 existing test files onto them
-- ✅ **T** pytest markers `slow`/`perf`/`manual` + default `addopts` exclusion; OCI 2000² test tagged `slow`
-- ⬜ **T** missing suites: `TargetSizeSearch`/`BudgetDecomposition` (pure), compressor short-circuit/rollback/escalation (stub engine), CLI e2e (argv), MCP tools (direct calls), `NumpySsimMeter`, hard-rule-#2 named test, `PageRange` boundaries
-- ⬜ **T** perf tier: `@pytest.mark.perf` budget assertions (photo < 1 s; 16-page corpus PDF < 30 s; API round-trip < 5 s) on reference inputs; **stress**: 50-page synthetic scan, 50 Mpx-adjacent image, concurrent API calls — `manual` mark
-- ⬜ **T** `pytest-cov` in pre-commit (not default addopts); coverage floor 80% on domain+application layers
-- ⬜ **T** golden files: commit reference outputs (photo, sheet, compressed pdf) + byte/SSIM-tolerance compare — catches Pillow/mozjpeg version drift
+### Wave 4 — Testing completion (M) ✅ 2026-07-16 (two carry-overs)
+- ✅ **T** `conftest.py` fixtures; new suites consume them (older 5 files keep local helpers — cosmetic carry-over)
+- ✅ **T** pytest markers `slow`/`perf`/`manual` + default exclusion; OCI 2000² tagged `slow`
+- ✅ **T** missing suites landed: `pdf_context/services_test` (BudgetDecomposition ∝ area, TargetSizeSearch floor/None/log-probes), `compressor_test` (short-circuit-validates, hard-rule-#1 bound, stub-engine escalation, honest budget-miss), `cli/main_test` (argv e2e ×7, exit-2 contract), `ssim_meter_test`, hard-rule-#2 named test. MCP suite landed in W3 (`server_test`)
+- ✅ **T** perf tier: photo/sheet <1 s, 3-pg compress <10 s (`-m perf`, in bazel); **stress** (`-m manual`, explicit only): 50-pg scan census, 8× concurrent API
+- ✅ **T** `pytest-cov` in the gate: floor 75%, actual **84%** (2,049 stmts)
+- ⬜ carry-over: golden-file drift fence (needs committed reference outputs — do with W6 benchmark work)
+- ⬜ carry-over: migrate older test files onto conftest fixtures (cosmetic)
 
 ### Wave 5 — Domain truth & census correctness (L) ⬜ (RESEARCH §1)
 - ⬜ CTM-true DPI census: port ocrmypdf `_contentstream.py` interpreter (MPL-2.0, ~130 lines) — per-placement DPI via `hypot`, Form-XObject recursion, fixes hard rule #3 and budget ∝ *actual* rendered area

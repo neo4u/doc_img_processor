@@ -1,4 +1,4 @@
-load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 py_binary(
     name = "main",
@@ -34,5 +34,15 @@ py_library(
         "//pdf_toolkit/photo_context/infrastructure",
         "//pdf_toolkit/shared_kernel",
         "@pypi//pypdfium2",
+    ],
+)
+
+py_test(
+    name = "main_test",
+    srcs = ["main_test.py"],
+    deps = [
+        ":cli",
+        "//pdf_toolkit:conftest",
+        "@pypi//pytest",
     ],
 )

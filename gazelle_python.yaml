@@ -17,6 +17,7 @@ manifest:
     certifi: certifi
     cffi: cffi
     click: click
+    coverage: coverage
     cryptography: cryptography
     dotenv: python_dotenv
     fastapi: fastapi
@@ -64,6 +65,7 @@ manifest:
     pypdfium2_cli: pypdfium2
     pypdfium2_raw: pypdfium2
     pytest: pytest
+    pytest_cov: pytest_cov
     python_multipart: python_multipart
     referencing: referencing
     rpds: rpds_py
@@ -76,4 +78,4 @@ manifest:
     uvicorn: uvicorn
   pip_repository:
     name: pypi
-integrity: a8719162d8e4b475109439b85cbfee9ef87441ebba98dece39df2d8e78a1800c
+integrity: f462840aa859da244fd334c55d2f053be13ca54cb1cd69c7ed2ad92ae3892495
