@@ -7303,51 +7303,51 @@
       "_origin": "ast"
     },
     {
-      "id": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
-      "label": "PRASANTH_TODO — manual testing & config (2026-07-15)",
+      "id": "prasanth_todo_prasanth_todo_your_manual_tasks_in_plain_english_updated_2026_07_16",
+      "label": "PRASANTH_TODO — your manual tasks, in plain English (updated 2026-07-16)",
       "file_type": "document",
       "source_file": "PRASANTH_TODO.md",
       "source_location": "L1",
       "_origin": "ast"
     },
     {
-      "id": "prasanth_todo_0_one_time_config_blockers_for_3",
-      "label": "0. One-time config (blockers for §3)",
+      "id": "prasanth_todo_section_0_one_time_setup_mostly_done_for_you",
+      "label": "Section 0 — One-time setup (mostly done for you)",
       "file_type": "document",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L6",
+      "source_location": "L9",
       "_origin": "ast"
     },
     {
-      "id": "prasanth_todo_1_headroom_a_b_2_days_keep_or_drop_decision",
-      "label": "1. Headroom A/B (~2 days → keep-or-drop decision)",
+      "id": "prasanth_todo_section_1_decide_whether_to_keep_headroom_takes_2_normal_workdays",
+      "label": "Section 1 — Decide whether to keep headroom (takes 2 normal workdays)",
       "file_type": "document",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L20",
+      "source_location": "L33",
       "_origin": "ast"
     },
     {
-      "id": "prasanth_todo_2_toolkit_physical_world_acceptance",
-      "label": "2. Toolkit — physical-world acceptance",
+      "id": "prasanth_todo_section_2_test_the_toolkit_against_the_real_world",
+      "label": "Section 2 — Test the toolkit against the real world",
       "file_type": "document",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L31",
+      "source_location": "L49",
       "_origin": "ast"
     },
     {
-      "id": "prasanth_todo_3_desktop_cowork_mcp_after_0",
-      "label": "3. Desktop / cowork MCP (after §0)",
+      "id": "prasanth_todo_section_3_test_the_toolkit_from_claude_desktop_after_section_0",
+      "label": "Section 3 — Test the toolkit from Claude Desktop (after Section 0)",
       "file_type": "document",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L46",
+      "source_location": "L81",
       "_origin": "ast"
     },
     {
-      "id": "prasanth_todo_when_done",
-      "label": "When done",
+      "id": "prasanth_todo_when_you_re_done",
+      "label": "When you're done",
       "file_type": "document",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L61",
+      "source_location": "L104",
       "_origin": "ast"
     },
     {
@@ -22998,7 +22998,7 @@
     },
     {
       "source": "prasanth_todo",
-      "target": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
+      "target": "prasanth_todo_prasanth_todo_your_manual_tasks_in_plain_english_updated_2026_07_16",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PRASANTH_TODO.md",
@@ -23006,48 +23006,48 @@
       "weight": 1.0
     },
     {
-      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
-      "target": "prasanth_todo_0_one_time_config_blockers_for_3",
+      "source": "prasanth_todo_prasanth_todo_your_manual_tasks_in_plain_english_updated_2026_07_16",
+      "target": "prasanth_todo_section_0_one_time_setup_mostly_done_for_you",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L6",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
-      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
-      "target": "prasanth_todo_1_headroom_a_b_2_days_keep_or_drop_decision",
+      "source": "prasanth_todo_prasanth_todo_your_manual_tasks_in_plain_english_updated_2026_07_16",
+      "target": "prasanth_todo_section_1_decide_whether_to_keep_headroom_takes_2_normal_workdays",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L20",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
-      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
-      "target": "prasanth_todo_2_toolkit_physical_world_acceptance",
+      "source": "prasanth_todo_prasanth_todo_your_manual_tasks_in_plain_english_updated_2026_07_16",
+      "target": "prasanth_todo_section_2_test_the_toolkit_against_the_real_world",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L31",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
-      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
-      "target": "prasanth_todo_3_desktop_cowork_mcp_after_0",
+      "source": "prasanth_todo_prasanth_todo_your_manual_tasks_in_plain_english_updated_2026_07_16",
+      "target": "prasanth_todo_section_3_test_the_toolkit_from_claude_desktop_after_section_0",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L46",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
-      "source": "prasanth_todo_prasanth_todo_manual_testing_config_2026_07_15",
-      "target": "prasanth_todo_when_done",
+      "source": "prasanth_todo_prasanth_todo_your_manual_tasks_in_plain_english_updated_2026_07_16",
+      "target": "prasanth_todo_when_you_re_done",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "PRASANTH_TODO.md",
-      "source_location": "L61",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
